@@ -29,10 +29,34 @@ class LibrusConfigFlow(ConfigFlow, domain=DOMAIN):
     @staticmethod
     def _validate_librus_credentials_sync(username: str, password: str) -> bool:
         """Validate credentials against Librus API (synchronous)."""
-        from py_librus_api import Librus
+        import requests as req
 
-        librus = Librus()
-        return librus.login(username, password)
+        host = "https://api.librus.pl/"
+        headers = {
+            "Authorization": "Basic Mjg6ODRmZGQzYTg3YjAzZDNlYTZmZmU3NzdiNThiMzMyYjE="
+        }
+
+        response = req.post(
+            f"{host}OAuth/Token",
+            data={
+                "username": username,
+                "password": password,
+                "librus_long_term_token": "1",
+                "grant_type": "password",
+            },
+            headers=headers,
+            timeout=30,
+        )
+
+        if response.ok:
+            return True
+
+        _LOGGER.debug(
+            "Librus login failed: HTTP %s - %s",
+            response.status_code,
+            response.text,
+        )
+        return False
 
     async def _validate_librus_credentials(
         self, username: str, password: str
