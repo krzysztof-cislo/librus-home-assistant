@@ -8,6 +8,6 @@
   "documentation": "https://github.com/krzysztof-cislo/librus-home-assistant",
   "issue_tracker": "https://github.com/krzysztof-cislo/librus-home-assistant/issues",
   "codeowners": ["@krzysztof-cislo"],
-  "requirements": [],
+  "requirements": ["py-librus-api>=0.3.1"],
   "dependencies": []
 }

@@ -22,10 +22,27 @@ Home Assistant integration for Librus.
 
 ## Configuration
 
+### Initial Setup
+
 1. Go to **Settings** → **Devices & Services**
 2. Click **Add Integration**
 3. Search for **Librus**
-4. Click **Submit** to complete setup
+4. Enter your Librus **login** and **password**
+5. Click **Submit** — credentials will be validated against Librus
+6. On success, the integration is configured and ready
+
+### Updating Credentials
+
+1. Go to **Settings** → **Devices & Services**
+2. Find the **Librus** integration card
+3. Click the **Configure** button
+4. Enter your updated **login** and **password**
+5. Click **Submit** — new credentials will be validated before saving
+
+### Troubleshooting
+
+- **Invalid login or password**: Double-check your Librus credentials and try again
+- **Could not connect to Librus**: Check your network connection and verify that Librus is accessible
 
 ## Support
 
