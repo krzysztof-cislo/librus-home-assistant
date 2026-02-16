@@ -1,0 +1,13 @@
+{
+  "domain": "librus",
+  "name": "Librus",
+  "integration_type": "hub",
+  "version": "1.0.0",
+  "config_flow": true,
+  "single_config_entry": true,
+  "documentation": "https://github.com/krzysztof-cislo/librus-home-assistant",
+  "issue_tracker": "https://github.com/krzysztof-cislo/librus-home-assistant/issues",
+  "codeowners": ["@krzysztof-cislo"],
+  "requirements": [],
+  "dependencies": []
+}
