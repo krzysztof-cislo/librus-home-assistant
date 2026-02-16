@@ -10,6 +10,7 @@ import voluptuous as vol
 from homeassistant.config_entries import ConfigFlow, ConfigFlowResult
 
 from .const import CONF_PASSWORD, CONF_USERNAME, DOMAIN
+from .librus_client import LibrusConnectionError
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -26,44 +27,14 @@ class LibrusConfigFlow(ConfigFlow, domain=DOMAIN):
 
     VERSION = 2
 
-    @staticmethod
-    def _validate_librus_credentials_sync(username: str, password: str) -> bool:
-        """Validate credentials against Librus API (synchronous)."""
-        import requests as req
-
-        host = "https://api.librus.pl/"
-        headers = {
-            "Authorization": "Basic Mjg6ODRmZGQzYTg3YjAzZDNlYTZmZmU3NzdiNThiMzMyYjE="
-        }
-
-        response = req.post(
-            f"{host}OAuth/Token",
-            data={
-                "username": username,
-                "password": password,
-                "librus_long_term_token": "1",
-                "grant_type": "password",
-            },
-            headers=headers,
-            timeout=30,
-        )
-
-        if response.ok:
-            return True
-
-        _LOGGER.debug(
-            "Librus login failed: HTTP %s - %s",
-            response.status_code,
-            response.text,
-        )
-        return False
-
     async def _validate_librus_credentials(
         self, username: str, password: str
     ) -> bool:
-        """Validate credentials against Librus API in executor."""
+        """Validate credentials against Librus in executor."""
+        from .librus_client import validate_credentials
+
         return await self.hass.async_add_executor_job(
-            self._validate_librus_credentials_sync,
+            validate_credentials,
             username,
             password,
         )
@@ -81,6 +52,8 @@ class LibrusConfigFlow(ConfigFlow, domain=DOMAIN):
             try:
                 if not await self._validate_librus_credentials(username, password):
                     errors["base"] = "invalid_auth"
+            except LibrusConnectionError:
+                errors["base"] = "cannot_connect"
             except Exception:
                 _LOGGER.exception("Unexpected error validating Librus credentials")
                 errors["base"] = "cannot_connect"
@@ -123,6 +96,8 @@ class LibrusConfigFlow(ConfigFlow, domain=DOMAIN):
             try:
                 if not await self._validate_librus_credentials(username, password):
                     errors["base"] = "invalid_auth"
+            except LibrusConnectionError:
+                errors["base"] = "cannot_connect"
             except Exception:
                 _LOGGER.exception("Unexpected error validating Librus credentials")
                 errors["base"] = "cannot_connect"
