@@ -13,8 +13,8 @@ import requests
 _LOGGER = logging.getLogger(__name__)
 
 LIBRUS_OAUTH_URL = "https://api.librus.pl/OAuth/Authorization"
-LIBRUS_OAUTH_2FA_URL = "https://api.librus.pl/OAuth/Authorization/2FA"
-LIBRUS_SYNERGIA_URL = "https://synergia.librus.pl"
+LIBRUS_OAUTH_GRANT_URL = "https://api.librus.pl/OAuth/Authorization/Grant"
+LIBRUS_API_URL = "https://synergia.librus.pl/gateway/api/2.0"
 OAUTH_CLIENT_ID = "46"
 REQUEST_TIMEOUT = 30
 
@@ -23,7 +23,6 @@ HEADERS = {
         "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
         "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
     ),
-    "Referer": "https://portal.librus.pl/rodzina/synergia/loguj",
 }
 
 
@@ -35,25 +34,31 @@ class LibrusConnectionError(Exception):
     """Raised when unable to connect to Librus."""
 
 
+class LibrusTimeoutError(LibrusConnectionError):
+    """Raised when a request to Librus times out."""
+
+
 def validate_credentials(username: str, password: str) -> bool:
-    """Validate Librus credentials using the Synergia OAuth flow.
+    """Validate Librus credentials using the full five-step OAuth flow.
 
-    Follows the same approach as the JS reference implementation:
-    1. GET OAuth/Authorization to initiate session
-    2. POST credentials to OAuth/Authorization
-    3. GET OAuth/Authorization/2FA to finalize auth
-    4. Verify session by accessing a protected Synergia page
+    Follows the Postman Auth folder sequence (librus_api.json):
+    1. GET OAuth/Authorization — initiate OAuth session
+    2. POST credentials to OAuth/Authorization — login
+    3. GET OAuth/Authorization/Grant — set session cookies via redirects
+    4. GET Auth/TokenInfo — extract UserIdentifier
+    5. GET Auth/UserInfo/{UserIdentifier} — activate API access
 
-    Returns True if credentials are valid, False otherwise.
-    Raises LibrusConnectionError on network/connection issues.
+    Returns True if all five steps succeed, False on auth failure.
+    Raises LibrusTimeoutError on request timeout.
+    Raises LibrusConnectionError on other network/connection issues.
+    Does not retry on failure (FR-009). Fresh session per call (FR-010).
     """
     session = requests.Session()
     session.headers.update(HEADERS)
-    session.cookies.set("TestCookie", "1", domain="synergia.librus.pl")
 
     try:
-        # Step 1: Initiate OAuth flow
-        _LOGGER.warning("Librus auth: initiating OAuth flow")
+        # Step 1: OAuth Init
+        _LOGGER.debug("Librus auth step 1: initiating OAuth flow")
         response = session.get(
             LIBRUS_OAUTH_URL,
             params={
@@ -63,13 +68,14 @@ def validate_credentials(username: str, password: str) -> bool:
             },
             timeout=REQUEST_TIMEOUT,
         )
-        _LOGGER.warning(
+        _LOGGER.debug(
             "Librus auth step 1: HTTP %s, URL: %s",
             response.status_code,
             response.url,
         )
 
-        # Step 2: Submit credentials
+        # Step 2: OAuth Login
+        _LOGGER.debug("Librus auth step 2: submitting credentials")
         response = session.post(
             f"{LIBRUS_OAUTH_URL}?client_id={OAUTH_CLIENT_ID}",
             data={
@@ -79,62 +85,82 @@ def validate_credentials(username: str, password: str) -> bool:
             },
             timeout=REQUEST_TIMEOUT,
         )
-        _LOGGER.warning(
+        _LOGGER.debug(
             "Librus auth step 2: HTTP %s, URL: %s",
             response.status_code,
             response.url,
         )
 
-        # Check for login error in response body
-        if not response.ok:
-            _LOGGER.warning(
-                "Librus auth: credential submission failed with HTTP %s",
-                response.status_code,
-            )
+        body_text = response.text
+        if "error" in body_text or "Nieprawidłowy" in body_text:
+            _LOGGER.debug("Librus auth step 2: invalid credentials detected")
             return False
 
-        # Step 3: Complete 2FA/auth redirect
+        # Step 3: OAuth Grant (sets session cookies via redirects)
+        _LOGGER.debug("Librus auth step 3: OAuth Grant")
         response = session.get(
-            LIBRUS_OAUTH_2FA_URL,
+            LIBRUS_OAUTH_GRANT_URL,
             params={"client_id": OAUTH_CLIENT_ID},
             timeout=REQUEST_TIMEOUT,
         )
-        _LOGGER.warning(
+        _LOGGER.debug(
             "Librus auth step 3: HTTP %s, URL: %s",
             response.status_code,
             response.url,
         )
 
-        # Step 4: Verify authentication by accessing Synergia
+        # Step 4: Get TokenInfo — extract UserIdentifier
+        _LOGGER.debug("Librus auth step 4: getting TokenInfo")
         response = session.get(
-            LIBRUS_SYNERGIA_URL,
+            f"{LIBRUS_API_URL}/Auth/TokenInfo",
             timeout=REQUEST_TIMEOUT,
-            allow_redirects=False,
         )
-        _LOGGER.warning(
-            "Librus auth verify: HTTP %s, Location: %s",
+        _LOGGER.debug(
+            "Librus auth step 4: HTTP %s",
             response.status_code,
-            response.headers.get("Location", "N/A"),
         )
 
-        # Authenticated: Synergia returns 200 or redirects to dashboard
-        # Not authenticated: redirects to login portal
-        if response.status_code == 200:
-            return True
+        if not response.ok:
+            _LOGGER.debug(
+                "Librus auth step 4: TokenInfo failed with HTTP %s",
+                response.status_code,
+            )
+            return False
 
-        location = response.headers.get("Location", "")
-        if "synergia.librus.pl" in location and "loguj" not in location:
-            return True
+        try:
+            token_data = response.json()
+            user_identifier = token_data["UserIdentifier"]
+        except (ValueError, KeyError):
+            _LOGGER.debug("Librus auth step 4: failed to parse UserIdentifier")
+            return False
 
-        _LOGGER.warning("Librus auth: not authenticated after OAuth flow")
-        return False
+        # Step 5: Activate API Access via UserInfo
+        _LOGGER.debug("Librus auth step 5: activating API access")
+        response = session.get(
+            f"{LIBRUS_API_URL}/Auth/UserInfo/{user_identifier}",
+            timeout=REQUEST_TIMEOUT,
+        )
+        _LOGGER.debug(
+            "Librus auth step 5: HTTP %s",
+            response.status_code,
+        )
+
+        if not response.ok:
+            _LOGGER.debug(
+                "Librus auth step 5: UserInfo failed with HTTP %s",
+                response.status_code,
+            )
+            return False
+
+        _LOGGER.debug("Librus auth: all five steps completed successfully")
+        return True
 
     except requests.exceptions.Timeout as err:
-        _LOGGER.warning("Librus auth: timeout - %s", err)
-        raise LibrusConnectionError("Connection to Librus timed out") from err
+        _LOGGER.debug("Librus auth: timeout - %s", err)
+        raise LibrusTimeoutError("Connection to Librus timed out") from err
     except requests.exceptions.ConnectionError as err:
-        _LOGGER.warning("Librus auth: connection error - %s", err)
+        _LOGGER.debug("Librus auth: connection error - %s", err)
         raise LibrusConnectionError("Could not connect to Librus") from err
     except requests.exceptions.RequestException as err:
-        _LOGGER.warning("Librus auth: request error - %s", err)
+        _LOGGER.debug("Librus auth: request error - %s", err)
         raise LibrusConnectionError(f"Librus request failed: {err}") from err
