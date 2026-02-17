@@ -1,0 +1,3 @@
+refresh_homework:
+  name: Refresh homework
+  description: Trigger an on-demand refresh of Librus homework data.

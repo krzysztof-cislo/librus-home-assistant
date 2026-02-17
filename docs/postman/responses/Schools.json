@@ -1,0 +1,101 @@
+{
+    "School": {
+        "Id": 8315,
+        "Name": "Zespół Szkolno-Przedszkolny w Wysokiej",
+        "Town": "Wysoka",
+        "Street": "ul. Chabrowa",
+        "State": "WOJ. DOLNOŚLĄSKIE",
+        "BuildingNumber": "99",
+        "ApartmentNumber": "",
+        "LessonsRange": [
+            {
+                "From": null,
+                "To": null,
+                "RawFrom": null,
+                "RawTo": null
+            },
+            {
+                "From": "07:45",
+                "To": "08:30",
+                "RawFrom": 465,
+                "RawTo": 510
+            },
+            {
+                "From": "08:40",
+                "To": "09:25",
+                "RawFrom": 520,
+                "RawTo": 565
+            },
+            {
+                "From": "09:35",
+                "To": "10:20",
+                "RawFrom": 575,
+                "RawTo": 620
+            },
+            {
+                "From": "10:30",
+                "To": "11:15",
+                "RawFrom": 630,
+                "RawTo": 675
+            },
+            {
+                "From": "11:25",
+                "To": "12:10",
+                "RawFrom": 685,
+                "RawTo": 730
+            },
+            {
+                "From": "12:20",
+                "To": "13:05",
+                "RawFrom": 740,
+                "RawTo": 785
+            },
+            {
+                "From": "13:30",
+                "To": "14:15",
+                "RawFrom": 810,
+                "RawTo": 855
+            },
+            {
+                "From": "14:25",
+                "To": "15:10",
+                "RawFrom": 865,
+                "RawTo": 910
+            },
+            {
+                "From": "15:20",
+                "To": "16:05",
+                "RawFrom": 920,
+                "RawTo": 965
+            },
+            {
+                "From": "16:10",
+                "To": "16:55",
+                "RawFrom": 970,
+                "RawTo": 1015
+            }
+        ],
+        "SchoolYear": 2025,
+        "VocationalSchool": 0,
+        "NameHeadTeacher": "Halina",
+        "SurnameHeadTeacher": "Frodyma",
+        "Project": 0,
+        "PostCode": "52-200",
+        "Service": {
+            "IsSynergy": true,
+            "Url": "https://synergia.librus.pl",
+            "Variant": {
+                "Name": "Altum",
+                "DisplayName": "Altum"
+            }
+        },
+        "Email": "sekretariat-szkola@zspwysoka.pl",
+        "PhoneNumber": "717151599"
+    },
+    "Resources": {
+        "..": {
+            "Url": "https://api.librus.pl/2.0/Root"
+        }
+    },
+    "Url": "https://api.librus.pl/2.0/Schools"
+}

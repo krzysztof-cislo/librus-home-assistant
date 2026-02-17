@@ -1,0 +1,146 @@
+{
+    "Categories": [
+        {
+            "Id": 7982,
+            "Name": "Sprawdzian",
+            "Color": {
+                "Id": 27,
+                "Url": "https://api.librus.pl/2.0//Colors/27"
+            }
+        },
+        {
+            "Id": 8359,
+            "Name": "praca dodatkowa",
+            "Color": {
+                "Id": 1,
+                "Url": "https://api.librus.pl/2.0//Colors/1"
+            }
+        },
+        {
+            "Id": 8360,
+            "Name": "zadanie domowe",
+            "Color": {
+                "Id": 17,
+                "Url": "https://api.librus.pl/2.0//Colors/17"
+            }
+        },
+        {
+            "Id": 8361,
+            "Name": "dyktando",
+            "Color": {
+                "Id": 23,
+                "Url": "https://api.librus.pl/2.0//Colors/23"
+            }
+        },
+        {
+            "Id": 8362,
+            "Name": "lektura",
+            "Color": {
+                "Id": 20,
+                "Url": "https://api.librus.pl/2.0//Colors/20"
+            }
+        },
+        {
+            "Id": 8363,
+            "Name": "kartkówka",
+            "Color": {
+                "Id": 21,
+                "Url": "https://api.librus.pl/2.0//Colors/21"
+            }
+        },
+        {
+            "Id": 8364,
+            "Name": "praca dodatkowa",
+            "Color": {
+                "Id": 29,
+                "Url": "https://api.librus.pl/2.0//Colors/29"
+            }
+        },
+        {
+            "Id": 8365,
+            "Name": "wypracowanie domowe",
+            "Color": {
+                "Id": 24,
+                "Url": "https://api.librus.pl/2.0//Colors/24"
+            }
+        },
+        {
+            "Id": 8366,
+            "Name": "wiersz",
+            "Color": {
+                "Id": 19,
+                "Url": "https://api.librus.pl/2.0//Colors/19"
+            }
+        },
+        {
+            "Id": 8553,
+            "Name": "wycieczka",
+            "Color": {
+                "Id": 16,
+                "Url": "https://api.librus.pl/2.0//Colors/16"
+            }
+        },
+        {
+            "Id": 8554,
+            "Name": "koncert",
+            "Color": {
+                "Id": 28,
+                "Url": "https://api.librus.pl/2.0//Colors/28"
+            }
+        },
+        {
+            "Id": 8555,
+            "Name": "Empiria",
+            "Color": {
+                "Id": 2,
+                "Url": "https://api.librus.pl/2.0//Colors/2"
+            }
+        },
+        {
+            "Id": 8556,
+            "Name": "inne wydarzenia",
+            "Color": {
+                "Id": 25,
+                "Url": "https://api.librus.pl/2.0//Colors/25"
+            }
+        },
+        {
+            "Id": 8557,
+            "Name": "zebranie",
+            "Color": {
+                "Id": 15,
+                "Url": "https://api.librus.pl/2.0//Colors/15"
+            }
+        },
+        {
+            "Id": 8558,
+            "Name": "konsultacje",
+            "Color": {
+                "Id": 30,
+                "Url": "https://api.librus.pl/2.0//Colors/30"
+            }
+        },
+        {
+            "Id": 9009,
+            "Name": "przedstawienie teatralne",
+            "Color": {
+                "Id": 7,
+                "Url": "https://api.librus.pl/2.0//Colors/7"
+            }
+        },
+        {
+            "Id": 11185,
+            "Name": "Spotkanie / lekcja online",
+            "Color": {
+                "Id": 5,
+                "Url": "https://api.librus.pl/2.0//Colors/5"
+            }
+        }
+    ],
+    "Resources": {
+        "..": {
+            "Url": "https://api.librus.pl/2.0/HomeWorks"
+        }
+    },
+    "Url": "https://api.librus.pl/2.0/HomeWorks/Categories"
+}

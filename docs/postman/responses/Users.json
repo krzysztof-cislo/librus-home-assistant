@@ -1,0 +1,1428 @@
+{
+    "Users": [
+        {
+            "Id": 1486356,
+            "AccountId": "LID-AUTH-USER-8315-SYIPR8IVX64F3BVA685Z",
+            "AccountNumericIdentifier": 2872249,
+            "FirstName": null,
+            "LastName": "administrator",
+            "IsSchoolAdministrator": true,
+            "IsEmployee": true,
+            "GroupId": 2
+        },
+        {
+            "Id": 1486358,
+            "AccountId": "LID-AUTH-USER-8315-DVX7836U5CG7YM4DMIAX",
+            "AccountNumericIdentifier": 2872251,
+            "FirstName": null,
+            "LastName": "sekretariat",
+            "IsEmployee": true,
+            "GroupId": 7
+        },
+        {
+            "Id": 1493245,
+            "AccountId": "LID-AUTH-USER-8315-F6J5ZQBFTY6LGFCDVI86",
+            "AccountNumericIdentifier": 2883681,
+            "FirstName": "Krzysztof",
+            "LastName": "Krupa",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1493416,
+            "AccountId": "LID-AUTH-USER-8315-ACWOQ84KXH6CCF6LQ8HW",
+            "AccountNumericIdentifier": 2883862,
+            "FirstName": "Małgorzata",
+            "LastName": "Baranowicz",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1493419,
+            "AccountId": "LID-AUTH-USER-8315-LKPSSZHP5MYQCZB7V7CM",
+            "AccountNumericIdentifier": 2883865,
+            "FirstName": "Barbara",
+            "LastName": "Bartkowiak - logopeda",
+            "IsPedagogue": true,
+            "IsEmployee": true,
+            "GroupId": 10
+        },
+        {
+            "Id": 1493427,
+            "AccountId": "LID-AUTH-USER-8315-B5LCTDXNQ3CVZMVV6BCG",
+            "AccountNumericIdentifier": 2883874,
+            "FirstName": "Katarzyna",
+            "LastName": "Biegańska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1493433,
+            "AccountId": "LID-AUTH-USER-8315-8GABGZTOCZ5YXPNVZDNZ",
+            "AccountNumericIdentifier": 2883881,
+            "FirstName": "Adam",
+            "LastName": "Ciereszko",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1493440,
+            "AccountId": "LID-AUTH-USER-8315-K53L57F88WLP7VROLRVJ",
+            "AccountNumericIdentifier": 2883889,
+            "FirstName": "Paulina",
+            "LastName": "Dębkowska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1493453,
+            "AccountId": "LID-AUTH-USER-8315-IKZQ34R7NUFXNAAFSV4M",
+            "AccountNumericIdentifier": 2883906,
+            "FirstName": "Magdalena",
+            "LastName": "Basiuk",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1493463,
+            "AccountId": "LID-AUTH-USER-8315-DK53KHTGTQSAYQP4IZCT",
+            "AccountNumericIdentifier": 2883921,
+            "FirstName": "Joanna",
+            "LastName": "Eljasińska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1493471,
+            "AccountId": "LID-AUTH-USER-8315-6OLETFOTTCQKKR3PSC35",
+            "AccountNumericIdentifier": 2883932,
+            "FirstName": "Katarzyna",
+            "LastName": "Cybulska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1493473,
+            "AccountId": "LID-AUTH-USER-8315-AE7SVRLCKIIEYRIDASJH",
+            "AccountNumericIdentifier": 2883934,
+            "FirstName": "Elżbieta",
+            "LastName": "Gruszczyńska",
+            "IsPedagogue": true,
+            "IsEmployee": true,
+            "GroupId": 10
+        },
+        {
+            "Id": 1493487,
+            "AccountId": "LID-AUTH-USER-8315-K5FLKQWZQJGLVPOTFYT5",
+            "AccountNumericIdentifier": 2883951,
+            "FirstName": "Katarzyna",
+            "LastName": "Komorowska-Kuchowicz",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1493493,
+            "AccountId": "LID-AUTH-USER-8315-CNF34OZVCVFV78BZJJTY",
+            "AccountNumericIdentifier": 2883959,
+            "FirstName": "Izabela",
+            "LastName": "Błaszczyk",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1493496,
+            "AccountId": "LID-AUTH-USER-8315-AJF4XDUSFOGKT4S8WZ5P",
+            "AccountNumericIdentifier": 2883963,
+            "FirstName": "Justyna",
+            "LastName": "Michalska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1493501,
+            "AccountId": "LID-AUTH-USER-8315-UDMNRAXHD8MFNNI6VDSI",
+            "AccountNumericIdentifier": 2883971,
+            "FirstName": "Małgorzata",
+            "LastName": "Ogińska-Kuriata",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1493505,
+            "AccountId": "LID-AUTH-USER-8315-NRSR8E7QDAEPE48RBEXI",
+            "AccountNumericIdentifier": 2883977,
+            "FirstName": "Elżbieta",
+            "LastName": "Piech",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1493507,
+            "AccountId": "LID-AUTH-USER-8315-CJC6U4RZAZMFV3CLGN3G",
+            "AccountNumericIdentifier": 2883980,
+            "FirstName": "Małgorzata",
+            "LastName": "Plaminiak",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1493510,
+            "AccountId": "LID-AUTH-USER-8315-KXAKVA5T3IY5BJ7HHODW",
+            "AccountNumericIdentifier": 2883984,
+            "FirstName": "Monika",
+            "LastName": "Sznitko",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1493514,
+            "AccountId": "LID-AUTH-USER-8315-7H4BP773RC8OCMT388BM",
+            "AccountNumericIdentifier": 2883990,
+            "FirstName": "Iwona",
+            "LastName": "Purtak-Więcław",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1493516,
+            "AccountId": "LID-AUTH-USER-8315-8MC4Y5WNSP5TYSSPZLK7",
+            "AccountNumericIdentifier": 2883993,
+            "FirstName": "Joanna",
+            "LastName": "Romulska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1493518,
+            "AccountId": "LID-AUTH-USER-8315-QSIES5UOAGADCGFTYVV8",
+            "AccountNumericIdentifier": 2883995,
+            "FirstName": "Izabela",
+            "LastName": "Skałka",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1493520,
+            "AccountId": "LID-AUTH-USER-8315-MVF6XWSN385OHVHJYRSS",
+            "AccountNumericIdentifier": 2883998,
+            "FirstName": "Magdalena",
+            "LastName": "Witoń",
+            "IsEmployee": true,
+            "GroupId": 3
+        },
+        {
+            "Id": 1493525,
+            "AccountId": "LID-AUTH-USER-8315-YZCSLRKNXKWA5HMVGWKY",
+            "AccountNumericIdentifier": 2884004,
+            "FirstName": "Monika",
+            "LastName": "Wilczyńska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1493530,
+            "AccountId": "LID-AUTH-USER-8315-Q6F8P3WAYC6DXU6TLLKI",
+            "AccountNumericIdentifier": 2884011,
+            "FirstName": "Agnieszka",
+            "LastName": "Zięba",
+            "IsEmployee": true,
+            "GroupId": 3
+        },
+        {
+            "Id": 1517325,
+            "AccountId": "LID-AUTH-USER-8315-PRSWXFB48LRZLTEPQYNC",
+            "AccountNumericIdentifier": 2925913,
+            "FirstName": "Halina",
+            "LastName": "Frodyma",
+            "IsEmployee": true,
+            "GroupId": 3
+        },
+        {
+            "Id": 1525932,
+            "AccountId": "LID-AUTH-USER-8315-8AYKTJAAUBZU4DBEUNHJ",
+            "AccountNumericIdentifier": 2942223,
+            "FirstName": "Kamila",
+            "LastName": "Nazarkiewicz",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1525935,
+            "AccountId": "LID-AUTH-USER-8315-BRKHUAHB7H5MPZPBUL4K",
+            "AccountNumericIdentifier": 2942227,
+            "FirstName": "Magdalena",
+            "LastName": "Stawicka",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1526019,
+            "AccountId": "LID-AUTH-USER-8315-BDL68JQUWYWA5FE8LEWH",
+            "AccountNumericIdentifier": 2942394,
+            "FirstName": "Dagmara",
+            "LastName": "Iwach",
+            "IsEmployee": true,
+            "GroupId": 3
+        },
+        {
+            "Id": 1526021,
+            "AccountId": "LID-AUTH-USER-8315-8QVHNWSIWGB3ZYSHQH7K",
+            "AccountNumericIdentifier": 2942397,
+            "FirstName": "Marta",
+            "LastName": "Polowczyk",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1526096,
+            "AccountId": "LID-AUTH-USER-8315-BCE4ONY6UVALKE4UCUBX",
+            "AccountNumericIdentifier": 2942546,
+            "FirstName": "Małgorzata",
+            "LastName": "Aszkiełowicz",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1526097,
+            "AccountId": "LID-AUTH-USER-8315-5EWTGWXJ6E7JSLV4TTZ6",
+            "AccountNumericIdentifier": 2942547,
+            "FirstName": "Natalia",
+            "LastName": "Wyszyńska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1526149,
+            "AccountId": "LID-AUTH-USER-8315-YS3KCTXFVNEGHROYA8JQ",
+            "AccountNumericIdentifier": 2942649,
+            "FirstName": "Aleksandra",
+            "LastName": "Marcinek",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1526296,
+            "AccountId": "LID-AUTH-USER-8315-NIRQHMYWZYFLMSNXEAXM",
+            "AccountNumericIdentifier": 2942941,
+            "FirstName": "Agnieszka",
+            "LastName": "Białostocka",
+            "IsPedagogue": true,
+            "IsEmployee": true,
+            "GroupId": 10
+        },
+        {
+            "Id": 1529811,
+            "AccountId": "LID-AUTH-USER-8315-VYIS54JW5I4BWXBZVVFF",
+            "AccountNumericIdentifier": 2949489,
+            "FirstName": "Anna",
+            "LastName": "Kalinowska-Kiewisz",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1540238,
+            "AccountId": "LID-AUTH-USER-8315-5VOGDQAJVTYLTTFL7KNJ",
+            "AccountNumericIdentifier": 2969739,
+            "FirstName": "Joanna",
+            "LastName": "Gładysz",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1540548,
+            "AccountId": "LID-AUTH-USER-8315-WAMETFKO3URDJF3WTYZR",
+            "AccountNumericIdentifier": 2970355,
+            "FirstName": "Mirosław",
+            "LastName": "Michalak",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1540549,
+            "AccountId": "LID-AUTH-USER-8315-LRBPIQXTUQ8U8FBI3MR8",
+            "AccountNumericIdentifier": 2970356,
+            "FirstName": "Beata",
+            "LastName": "Skalska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1545178,
+            "AccountId": "LID-AUTH-USER-8315-E8TUD8EOWW6NZ5EV65N7",
+            "AccountNumericIdentifier": 2979382,
+            "FirstName": "Ewelina",
+            "LastName": "Goraj",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1545179,
+            "AccountId": "LID-AUTH-USER-8315-RFVKGLRNXSCHE4WYCYOS",
+            "AccountNumericIdentifier": 2979383,
+            "FirstName": "N.Edyta",
+            "LastName": "Jęchorek",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1547943,
+            "AccountId": "LID-AUTH-USER-8315-X8IWTDGXC73AVNDYNWBT",
+            "AccountNumericIdentifier": 2984593,
+            "FirstName": "Użytkownik",
+            "LastName": "Świetlica",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1553365,
+            "AccountId": "LID-AUTH-USER-8315-6YPMCINKTI5AKR665BW4",
+            "AccountNumericIdentifier": 2994943,
+            "FirstName": "Beata",
+            "LastName": "Garncarz",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1553366,
+            "AccountId": "LID-AUTH-USER-8315-RWWFFTN8UG6LCDKHBTUO",
+            "AccountNumericIdentifier": 2994944,
+            "FirstName": "Joanna",
+            "LastName": "Marszałkowska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1553368,
+            "AccountId": "LID-AUTH-USER-8315-FQARZOMGULOWVRCKREKX",
+            "AccountNumericIdentifier": 2994946,
+            "FirstName": "Agnieszka",
+            "LastName": "Samocka",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1553520,
+            "AccountId": "LID-AUTH-USER-8315-IVLJ4T6ZGR4CLCZ3ZQQK",
+            "AccountNumericIdentifier": 2995239,
+            "FirstName": "Dietetyk",
+            "LastName": "Intendent",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1554542,
+            "AccountId": "LID-AUTH-USER-8315-SN6DGBGUFQZGZN85VN4A",
+            "AccountNumericIdentifier": 2997119,
+            "FirstName": "N.Elżbieta",
+            "LastName": "Gruszczyńska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1554998,
+            "AccountId": "LID-AUTH-USER-8315-DFADSMT8F3MNTTAECYZH",
+            "AccountNumericIdentifier": 2998007,
+            "FirstName": "N. Agnieszka",
+            "LastName": "Białostocka",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1566250,
+            "AccountId": "LID-AUTH-USER-8315-R8VJPMJGHR7V5BWSC7OO",
+            "AccountNumericIdentifier": 3019794,
+            "FirstName": "Barbara - logopeda",
+            "LastName": "Bartkowiak",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1589959,
+            "AccountId": "LID-AUTH-USER-8315-UZP84MUFCN5L7AFFNEUH",
+            "AccountNumericIdentifier": 3063976,
+            "FirstName": "Magdalena",
+            "LastName": "Kempińska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1589965,
+            "AccountId": "LID-AUTH-USER-8315-5VU35N8X3WDNUNV538P5",
+            "AccountNumericIdentifier": 3063982,
+            "FirstName": "Izabela",
+            "LastName": "Wąsik - Syta",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1589966,
+            "AccountId": "LID-AUTH-USER-8315-XTI8IHNEKEEHOIIBGZLY",
+            "AccountNumericIdentifier": 3063983,
+            "FirstName": "Joanna",
+            "LastName": "Olejnik",
+            "IsPedagogue": true,
+            "IsEmployee": true,
+            "GroupId": 10
+        },
+        {
+            "Id": 1589972,
+            "AccountId": "LID-AUTH-USER-8315-QN4E3AIYVRPRVYQBGRTD",
+            "AccountNumericIdentifier": 3063992,
+            "FirstName": "Danuta",
+            "LastName": "Jackowska - Bajak",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1593166,
+            "AccountId": "LID-AUTH-USER-8315-DOVC4JHBEN7M7AITDFOL",
+            "AccountNumericIdentifier": 3069938,
+            "FirstName": "Kinga",
+            "LastName": "Domagała",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1594018,
+            "AccountId": "LID-AUTH-USER-8315-NIMDTVQ777NZ8VIFUZCV",
+            "AccountNumericIdentifier": 3071479,
+            "FirstName": "Izabela",
+            "LastName": "Albrychiewicz",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1594023,
+            "AccountId": "LID-AUTH-USER-8315-8WK37GU78QR6WWUGU7PN",
+            "AccountNumericIdentifier": 3071484,
+            "FirstName": "Gizela",
+            "LastName": "Moraczewska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1594024,
+            "AccountId": "LID-AUTH-USER-8315-XBRH3P7AFULM4JBGOUE7",
+            "AccountNumericIdentifier": 3071485,
+            "FirstName": "Bożena",
+            "LastName": "Pelc",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1609692,
+            "AccountId": "LID-AUTH-USER-8315-XT4DZZ86OJ7VSAMERIR7",
+            "AccountNumericIdentifier": 3101390,
+            "FirstName": "Nauczyciel",
+            "LastName": "Nauczyciel",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1649837,
+            "AccountId": "LID-AUTH-USER-8315-DKUXSEAKXZHR43NTYOUI",
+            "AccountNumericIdentifier": 3177538,
+            "FirstName": "Przemysław",
+            "LastName": "Iwachów",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1649841,
+            "AccountId": "LID-AUTH-USER-8315-FDVGPJ5J333RGV3ANVH8",
+            "AccountNumericIdentifier": 3177542,
+            "FirstName": "Agata",
+            "LastName": "Sieniuta",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1649842,
+            "AccountId": "LID-AUTH-USER-8315-LHGTUBMME7BVZ5A4FJ84",
+            "AccountNumericIdentifier": 3177543,
+            "FirstName": "Agnieszka",
+            "LastName": "Zadrożna-Koreń",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1650185,
+            "AccountId": "LID-AUTH-USER-8315-NGQIZCGNCNHCNJHC5JLV",
+            "AccountNumericIdentifier": 3178206,
+            "FirstName": "Irena",
+            "LastName": "Polańska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1659000,
+            "AccountId": "LID-AUTH-USER-8315-N3KWGQKOXVH4PFSP6VHE",
+            "AccountNumericIdentifier": 3195211,
+            "FirstName": "Wiktoria",
+            "LastName": "Miaka",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1688945,
+            "AccountId": "LID-AUTH-USER-8315-QZGI3WXTYZSLWGFJJKK3",
+            "AccountNumericIdentifier": 3252110,
+            "FirstName": "Ewa",
+            "LastName": "Iwachów",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1688946,
+            "AccountId": "LID-AUTH-USER-8315-WILSJ6B8IXHZMFN8BPZA",
+            "AccountNumericIdentifier": 3252111,
+            "FirstName": "Katarzyna",
+            "LastName": "Tadla-Czmyr",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1704708,
+            "AccountId": "LID-AUTH-USER-8315-MWCVXQASKKFZDBGORQEZ",
+            "AccountNumericIdentifier": 3282131,
+            "FirstName": "Agnieszka",
+            "LastName": "Łusiak",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1708627,
+            "AccountId": "LID-AUTH-USER-8315-5RG4M5EAM5H8JYGJSZNL",
+            "AccountNumericIdentifier": 3289609,
+            "FirstName": "N. Grażyna",
+            "LastName": "Robaszek",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1738628,
+            "AccountId": "LID-AUTH-USER-8315-A8NIFM56OTSQOFMFB4JU",
+            "AccountNumericIdentifier": 3346666,
+            "FirstName": "Barbara",
+            "LastName": "Lichtarska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1738876,
+            "AccountId": "LID-AUTH-USER-8315-I65IWHQ5T63ZGFLQ4PDG",
+            "AccountNumericIdentifier": 3347154,
+            "FirstName": "Joanna",
+            "LastName": "Dąbrowska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1741157,
+            "AccountId": "LID-AUTH-USER-8315-RN5FE5GNI86ZEOE3LFM6",
+            "AccountNumericIdentifier": 3351435,
+            "FirstName": "Aneta",
+            "LastName": "Eisler",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1741163,
+            "AccountId": "LID-AUTH-USER-8315-7UVGGS7YFWN574RBW8AW",
+            "AccountNumericIdentifier": 3351444,
+            "FirstName": "Alicja",
+            "LastName": "Grzesiak",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1741172,
+            "AccountId": "LID-AUTH-USER-8315-5UZNZBDDYLWNPDYCB3EM",
+            "AccountNumericIdentifier": 3351460,
+            "FirstName": "Katarzyna",
+            "LastName": "Olszowska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1741176,
+            "AccountId": "LID-AUTH-USER-8315-K4PN3OX7QWC688K7TYTJ",
+            "AccountNumericIdentifier": 3351467,
+            "FirstName": "Monika",
+            "LastName": "Orman-Chodyra",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1741180,
+            "AccountId": "LID-AUTH-USER-8315-8QAB7ERJCBAE75F3O5Q8",
+            "AccountNumericIdentifier": 3351474,
+            "FirstName": "Hanna",
+            "LastName": "Szparaga",
+            "IsPedagogue": true,
+            "IsEmployee": true,
+            "GroupId": 10
+        },
+        {
+            "Id": 1756676,
+            "AccountId": "LID-AUTH-USER-8315-NZSYZ43LLR78BGUT4I8G",
+            "AccountNumericIdentifier": 3381510,
+            "FirstName": "Anna",
+            "LastName": "Zakrzewska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1758070,
+            "AccountId": "LID-AUTH-USER-8315-UG3LKKENZR7SRWTIV6K7",
+            "AccountNumericIdentifier": 3384267,
+            "FirstName": "N. Hanna",
+            "LastName": "Szparaga",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1758243,
+            "AccountId": "LID-AUTH-USER-8315-4HVWIK6VWZ8MPK6OR37V",
+            "AccountNumericIdentifier": 3384599,
+            "FirstName": "Joanna",
+            "LastName": "Białkowska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1760841,
+            "AccountId": "LID-AUTH-USER-8315-RGIDX5H5F87YQWZLGPUE",
+            "AccountNumericIdentifier": 3389060,
+            "FirstName": "N.Joanna",
+            "LastName": "Olejnik",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1760953,
+            "AccountId": "LID-AUTH-USER-8315-YJXPIBZIJLKNM3K8ZO7K",
+            "AccountNumericIdentifier": 3389274,
+            "FirstName": "Ewelina",
+            "LastName": "Oleszczak",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1765791,
+            "AccountId": "LID-AUTH-USER-8315-MZ4CMO6764VYDWF56CMJ",
+            "AccountNumericIdentifier": 3398448,
+            "FirstName": "Iryna",
+            "LastName": "Kviatkovska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1781835,
+            "AccountId": "LID-AUTH-USER-8315-IOZLPUE5R76IX6QD4VHD",
+            "AccountNumericIdentifier": 3429455,
+            "FirstName": "Anna",
+            "LastName": "Olszak",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1781837,
+            "AccountId": "LID-AUTH-USER-8315-LMOWFRVVNIWLAHVEQ5RO",
+            "AccountNumericIdentifier": 3429458,
+            "FirstName": "Monika",
+            "LastName": "Samborska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1781838,
+            "AccountId": "LID-AUTH-USER-8315-4VS5YULSFOHP8QTUTOTR",
+            "AccountNumericIdentifier": 3429459,
+            "FirstName": "Małgorzata",
+            "LastName": "Grela",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1817782,
+            "AccountId": "LID-AUTH-USER-8315-BIKBBRVVYJQXXD6WDGXW",
+            "AccountNumericIdentifier": 3497994,
+            "FirstName": "Katarzyna",
+            "LastName": "Sienkowska",
+            "IsEmployee": true,
+            "GroupId": 7
+        },
+        {
+            "Id": 1817952,
+            "AccountId": "LID-AUTH-USER-8315-XT66RDBK8GAMU4PRIQWH",
+            "AccountNumericIdentifier": 3498314,
+            "FirstName": "Justyna",
+            "LastName": "Michalska",
+            "IsSchoolAdministrator": true,
+            "IsEmployee": true,
+            "GroupId": 2
+        },
+        {
+            "Id": 1817990,
+            "AccountId": "LID-AUTH-USER-8315-4IAAFUCPSUK7SQT6SPP7",
+            "AccountNumericIdentifier": 3498370,
+            "FirstName": "Anna",
+            "LastName": "Bielecka",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1817992,
+            "AccountId": "LID-AUTH-USER-8315-MRFXVNBUZXFP6WRPP4PN",
+            "AccountNumericIdentifier": 3498372,
+            "FirstName": "Justyna",
+            "LastName": "Chalicz",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1817993,
+            "AccountId": "LID-AUTH-USER-8315-GOXRSXDCMEGDANSPQFWG",
+            "AccountNumericIdentifier": 3498373,
+            "FirstName": "Wiktoria",
+            "LastName": "Czornij",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1817994,
+            "AccountId": "LID-AUTH-USER-8315-EIW7Q8GSQX8GJ7SB55QN",
+            "AccountNumericIdentifier": 3498374,
+            "FirstName": "Oksana",
+            "LastName": "Frolova",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1817997,
+            "AccountId": "LID-AUTH-USER-8315-QF3VEMX3ABBHKEKYMISN",
+            "AccountNumericIdentifier": 3498379,
+            "FirstName": "Joanna",
+            "LastName": "Grabowska",
+            "IsEmployee": true,
+            "GroupId": 3
+        },
+        {
+            "Id": 1817998,
+            "AccountId": "LID-AUTH-USER-8315-85GMW6QYC8ZPTDSNOHDI",
+            "AccountNumericIdentifier": 3498380,
+            "FirstName": "N. Yevhenia",
+            "LastName": "Mykhailova",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1818000,
+            "AccountId": "LID-AUTH-USER-8315-PBMKSABEWIPNGFQJYKRV",
+            "AccountNumericIdentifier": 3498383,
+            "FirstName": "Anita",
+            "LastName": "Jawień",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1818001,
+            "AccountId": "LID-AUTH-USER-8315-PLYI5QWVQDNYEMP5DWPA",
+            "AccountNumericIdentifier": 3498384,
+            "FirstName": "Alina",
+            "LastName": "Kozigrodzka",
+            "IsEmployee": true,
+            "GroupId": 12
+        },
+        {
+            "Id": 1818005,
+            "AccountId": "LID-AUTH-USER-8315-QFF8FF5DCATLWCKPDZVK",
+            "AccountNumericIdentifier": 3498391,
+            "FirstName": "Grażyna",
+            "LastName": "Proskin",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1818006,
+            "AccountId": "LID-AUTH-USER-8315-V3HTZKYXKRAZ8NAAESYD",
+            "AccountNumericIdentifier": 3498392,
+            "FirstName": "Joanna",
+            "LastName": "Podlejska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1818008,
+            "AccountId": "LID-AUTH-USER-8315-63KLCPCSGBT8LLMJVKOO",
+            "AccountNumericIdentifier": 3498395,
+            "FirstName": "Katarzyna",
+            "LastName": "Soja",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1818013,
+            "AccountId": "LID-AUTH-USER-8315-TZUC3UJJJWWHZPFHKDVT",
+            "AccountNumericIdentifier": 3498401,
+            "FirstName": "Anna",
+            "LastName": "Warzycha",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1818014,
+            "AccountId": "LID-AUTH-USER-8315-PIW5JN87VNV33LCIP83Q",
+            "AccountNumericIdentifier": 3498402,
+            "FirstName": "Monika",
+            "LastName": "Wiewióra",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1818015,
+            "AccountId": "LID-AUTH-USER-8315-OZCU5BTQ55SGSFKYC54G",
+            "AccountNumericIdentifier": 3498403,
+            "FirstName": "Natalia",
+            "LastName": "Zapotoczna",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1818019,
+            "AccountId": "LID-AUTH-USER-8315-VNE8MJLDTABG6MMEFDGD",
+            "AccountNumericIdentifier": 3498409,
+            "FirstName": "Marzenna",
+            "LastName": "Zakrzewska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1818020,
+            "AccountId": "LID-AUTH-USER-8315-M3B4DBTUOJQGLKAYQFWZ",
+            "AccountNumericIdentifier": 3498410,
+            "FirstName": "Karolina",
+            "LastName": "Skwarzyńska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1818021,
+            "AccountId": "LID-AUTH-USER-8315-NW6CBFAALRCB3KA4F7E4",
+            "AccountNumericIdentifier": 3498411,
+            "FirstName": "Wiktoria",
+            "LastName": "Molfa",
+            "IsPedagogue": true,
+            "IsEmployee": true,
+            "GroupId": 10
+        },
+        {
+            "Id": 1818022,
+            "AccountId": "LID-AUTH-USER-8315-RRLAQD8DQRQSHXPTB3DZ",
+            "AccountNumericIdentifier": 3498412,
+            "FirstName": "Beata",
+            "LastName": "Rybowicz",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1818024,
+            "AccountId": "LID-AUTH-USER-8315-45RTJ3BSS4MFBXV8463T",
+            "AccountNumericIdentifier": 3498415,
+            "FirstName": "Magdalena",
+            "LastName": "Orlik",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1818307,
+            "AccountId": "LID-AUTH-USER-8315-FUYNERV65E64GWTWD8SY",
+            "AccountNumericIdentifier": 3498970,
+            "FirstName": "Alexandra",
+            "LastName": "Arbaczewska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1818309,
+            "AccountId": "LID-AUTH-USER-8315-EZIFCJ3MOHVGS78GKZP4",
+            "AccountNumericIdentifier": 3498972,
+            "FirstName": "Katarzyna",
+            "LastName": "Gajowska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1818312,
+            "AccountId": "LID-AUTH-USER-8315-U8G7DLQ3BVSVKCHPQW6R",
+            "AccountNumericIdentifier": 3498976,
+            "FirstName": "Agnieszka",
+            "LastName": "Pętal",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1818315,
+            "AccountId": "LID-AUTH-USER-8315-86IQLLQ5A8MWG8L6OCBT",
+            "AccountNumericIdentifier": 3498981,
+            "FirstName": "Justyna",
+            "LastName": "Zawadzka",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1818317,
+            "AccountId": "LID-AUTH-USER-8315-Q47ET4VGGAQJO7IQ6XOI",
+            "AccountNumericIdentifier": 3498983,
+            "FirstName": "Anna",
+            "LastName": "Widawska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1818318,
+            "AccountId": "LID-AUTH-USER-8315-AXCNXSCJ4PVHHNBXQ4QQ",
+            "AccountNumericIdentifier": 3498984,
+            "FirstName": "Ryszarda",
+            "LastName": "Wolska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1818323,
+            "AccountId": "LID-AUTH-USER-8315-QK3ZH4MQY6QOI8W6SHLH",
+            "AccountNumericIdentifier": 3498991,
+            "FirstName": "Bożena",
+            "LastName": "Kuras",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1819154,
+            "AccountId": "LID-AUTH-USER-8315-FOJSDZ8TB44KXCYKQNTL",
+            "AccountNumericIdentifier": 3500564,
+            "FirstName": "Małgorzata",
+            "LastName": "Mikieko",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1836391,
+            "AccountId": "LID-AUTH-USER-8315-NMDHYQL7VSUXMKVMUKPZ",
+            "AccountNumericIdentifier": 3533965,
+            "FirstName": "Joanna",
+            "LastName": "Łukaszek",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1837547,
+            "AccountId": "LID-AUTH-USER-8315-TQ64UDVRDLPPZU8VB3TQ",
+            "AccountNumericIdentifier": 3536194,
+            "FirstName": "Grażyna",
+            "LastName": "Robaszek",
+            "IsPedagogue": true,
+            "IsEmployee": true,
+            "GroupId": 10
+        },
+        {
+            "Id": 1837792,
+            "AccountId": "LID-AUTH-USER-8315-CEJQRM66NQDSVKHI83WC",
+            "AccountNumericIdentifier": 3536645,
+            "FirstName": "Gabriela",
+            "LastName": "Kulczycka",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1838054,
+            "AccountId": "LID-AUTH-USER-8315-3JVY8ASGHZ84DIWNTJDP",
+            "AccountNumericIdentifier": 3537151,
+            "FirstName": "Alina",
+            "LastName": "Kozigrodzka",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1838055,
+            "AccountId": "LID-AUTH-USER-8315-BNTUZI5E5HFZWIRP7XHD",
+            "AccountNumericIdentifier": 3537152,
+            "FirstName": "Wiktoria",
+            "LastName": "Molfa",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1839873,
+            "AccountId": "LID-AUTH-USER-8315-DG6U5X6KJCF4RODJXPNU",
+            "AccountNumericIdentifier": 3540246,
+            "FirstName": "Andżelika",
+            "LastName": "Nowak",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1842761,
+            "AccountId": "LID-AUTH-USER-8315-7TNVVP76LA3JIJQLCRDE",
+            "AccountNumericIdentifier": 3545755,
+            "FirstName": "Małgorzata",
+            "LastName": "Szewczyk",
+            "IsEmployee": true,
+            "GroupId": 7
+        },
+        {
+            "Id": 1842770,
+            "AccountId": "LID-AUTH-USER-8315-B6COHQYC3C3VODX8XGFC",
+            "AccountNumericIdentifier": 3545768,
+            "FirstName": "Lidia",
+            "LastName": "Sochacka",
+            "IsEmployee": true,
+            "GroupId": 7
+        },
+        {
+            "Id": 1859339,
+            "AccountId": "LID-AUTH-USER-8315-BOBYTO4CYW8CI5H4S68I",
+            "AccountNumericIdentifier": 3577288,
+            "FirstName": "Paulina",
+            "LastName": "Bochenek",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1859340,
+            "AccountId": "LID-AUTH-USER-8315-X7UBJ6LNAS46RHOHVRML",
+            "AccountNumericIdentifier": 3577289,
+            "FirstName": "Nela",
+            "LastName": "Lewandowska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1859608,
+            "AccountId": "LID-AUTH-USER-8315-7J6R4LPOKNWD54RUIMSG",
+            "AccountNumericIdentifier": 3577813,
+            "FirstName": "Maciej",
+            "LastName": "Chrząszcz",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1859609,
+            "AccountId": "LID-AUTH-USER-8315-UHU747PYRITKDNWMVGOY",
+            "AccountNumericIdentifier": 3577814,
+            "FirstName": "Iryna",
+            "LastName": "Hulka",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1859610,
+            "AccountId": "LID-AUTH-USER-8315-8T43GVPRWFBZ4VELXZR4",
+            "AccountNumericIdentifier": 3577815,
+            "FirstName": "Konrad",
+            "LastName": "Góral",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1859611,
+            "AccountId": "LID-AUTH-USER-8315-WLJZQRAPENQIAQY7EH4V",
+            "AccountNumericIdentifier": 3577816,
+            "FirstName": "Anna",
+            "LastName": "Orańska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1859612,
+            "AccountId": "LID-AUTH-USER-8315-7UDFCXKIVV5LL84WRGJU",
+            "AccountNumericIdentifier": 3577817,
+            "FirstName": "Joanna",
+            "LastName": "Pysiewicz",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1859684,
+            "AccountId": "LID-AUTH-USER-8315-XDYCIHKDM5XLC4T4WKBB",
+            "AccountNumericIdentifier": 3577959,
+            "FirstName": "Hanna",
+            "LastName": "Frankowska-Jakubiel",
+            "IsPedagogue": true,
+            "IsEmployee": true,
+            "GroupId": 10
+        },
+        {
+            "Id": 1859692,
+            "AccountId": "LID-AUTH-USER-8315-GJ67MWMT4SV6L8Q6RVNC",
+            "AccountNumericIdentifier": 3577974,
+            "FirstName": "Daria",
+            "LastName": "Płókarz",
+            "IsPedagogue": true,
+            "IsEmployee": true,
+            "GroupId": 10
+        },
+        {
+            "Id": 1859699,
+            "AccountId": "LID-AUTH-USER-8315-CBPYJWGDOWRSSNIBC6QU",
+            "AccountNumericIdentifier": 3577987,
+            "FirstName": "Piotr",
+            "LastName": "Maciaszek",
+            "IsPedagogue": true,
+            "IsEmployee": true,
+            "GroupId": 10
+        },
+        {
+            "Id": 1862882,
+            "AccountId": "LID-AUTH-USER-8315-TG4P4GCKLLALYO3J5EL7",
+            "AccountNumericIdentifier": 3584173,
+            "FirstName": "Katarzyna Kamila",
+            "LastName": "Biegańska",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1870983,
+            "AccountId": "LID-AUTH-USER-8315-NW7Y4W6PDBBSCMLU8EZD",
+            "AccountNumericIdentifier": 3600030,
+            "FirstName": "Anna",
+            "LastName": "Domaradzka",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1871227,
+            "AccountId": "LID-AUTH-USER-8315-ZDGZ7RJFBDH8SVYXVZLU",
+            "AccountNumericIdentifier": 3600453,
+            "FirstName": "N.Hanna",
+            "LastName": "Frankowska-Jakubiel",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1871229,
+            "AccountId": "LID-AUTH-USER-8315-6DDZGWBSAWUZPVDBEAZL",
+            "AccountNumericIdentifier": 3600455,
+            "FirstName": "N.Piotr",
+            "LastName": "Maciaszek",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1871230,
+            "AccountId": "LID-AUTH-USER-8315-VPR3O78RSXIVJEEFCG7O",
+            "AccountNumericIdentifier": 3600456,
+            "FirstName": "N.Daria",
+            "LastName": "Płókarz",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1874287,
+            "AccountId": "LID-AUTH-USER-8315-ZFG64WRJHKU5PT88PWM4",
+            "AccountNumericIdentifier": 3606374,
+            "FirstName": "Aleksandra",
+            "LastName": "Palka",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1876697,
+            "AccountId": "LID-AUTH-USER-8315-3AI7VRJJYO8YZFMDEG3N",
+            "AccountNumericIdentifier": 3610961,
+            "FirstName": "Adrianna",
+            "LastName": "Wójcik",
+            "IsEmployee": true,
+            "GroupId": 7
+        },
+        {
+            "Id": 1890185,
+            "AccountId": "LID-AUTH-USER-8315-VYMFA3WNYRVS858SL3RT",
+            "AccountNumericIdentifier": 3636763,
+            "FirstName": "Agnieszka",
+            "LastName": "Jaksa",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1890191,
+            "AccountId": "LID-AUTH-USER-8315-AH4TKZSLV4MU8ZRL3ER6",
+            "AccountNumericIdentifier": 3636774,
+            "FirstName": "Kamilla",
+            "LastName": "Lulewicz",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1890192,
+            "AccountId": "LID-AUTH-USER-8315-OUDC8X3CUZF5LCFJHTGX",
+            "AccountNumericIdentifier": 3636775,
+            "FirstName": "Natalia",
+            "LastName": "Rzadkiewicz",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1890194,
+            "AccountId": "LID-AUTH-USER-8315-INBOTVDLCLSVBT4MTKTK",
+            "AccountNumericIdentifier": 3636778,
+            "FirstName": "Agata",
+            "LastName": "Szal",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1890203,
+            "AccountId": "LID-AUTH-USER-8315-4SVRNQKFFJD3SJI4CJGV",
+            "AccountNumericIdentifier": 3636795,
+            "FirstName": "Nataliia",
+            "LastName": "Plaksii",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1890206,
+            "AccountId": "LID-AUTH-USER-8315-WRKUSGQZ337TCRQHWBDE",
+            "AccountNumericIdentifier": 3636800,
+            "FirstName": "Patrycja",
+            "LastName": "Waligóra-Czernik",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1890212,
+            "AccountId": "LID-AUTH-USER-8315-8F4NNGSJZHAERD5YEAF4",
+            "AccountNumericIdentifier": 3636811,
+            "FirstName": "Anna",
+            "LastName": "Włusek",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1890274,
+            "AccountId": "LID-AUTH-USER-8315-NPPFQDAIYYAFREZ56TXS",
+            "AccountNumericIdentifier": 3636926,
+            "FirstName": "Anna",
+            "LastName": "Sawaryn",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1890295,
+            "AccountId": "LID-AUTH-USER-8315-56WUEUIMGA7OEHOM44EN",
+            "AccountNumericIdentifier": 3636964,
+            "FirstName": "Elżbieta",
+            "LastName": "Wareńczak",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1890299,
+            "AccountId": "LID-AUTH-USER-8315-JFJ8D4EHDHZ3FMX7XODD",
+            "AccountNumericIdentifier": 3636970,
+            "FirstName": "Magdalena",
+            "LastName": "Sobkowicz",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1895835,
+            "AccountId": "LID-AUTH-USER-8315-F3S5LAOB67C786IDSEON",
+            "AccountNumericIdentifier": 3647601,
+            "FirstName": "Marta",
+            "LastName": "Patora-Szmigiel",
+            "IsPedagogue": true,
+            "IsEmployee": true,
+            "GroupId": 10
+        },
+        {
+            "Id": 1895836,
+            "AccountId": "LID-AUTH-USER-8315-LLZPDEOR8PXWIVF8MBCI",
+            "AccountNumericIdentifier": 3647603,
+            "FirstName": "N. Marta",
+            "LastName": "Patora-Szmigiel",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1898049,
+            "AccountId": "LID-AUTH-USER-8315-KSR7JMVQ867JFZPS8EIP",
+            "AccountNumericIdentifier": 3651932,
+            "FirstName": "Edyta",
+            "LastName": "Jęchorek",
+            "IsPedagogue": true,
+            "IsEmployee": true,
+            "GroupId": 10
+        },
+        {
+            "Id": 1900820,
+            "AccountId": "LID-AUTH-USER-8315-ISP8UXXUQ4O6NHQLBQFU",
+            "AccountNumericIdentifier": 3657442,
+            "FirstName": "Aleksandra",
+            "LastName": "Hamerlik",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1900821,
+            "AccountId": "LID-AUTH-USER-8315-C3XWZ4UFT3UBUZGAK8H4",
+            "AccountNumericIdentifier": 3657443,
+            "FirstName": "Anna",
+            "LastName": "Hebda",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1901251,
+            "AccountId": "LID-AUTH-USER-8315-63WG36AESIVGVGH3INM3",
+            "AccountNumericIdentifier": 3658248,
+            "FirstName": "Anna",
+            "LastName": "Rudaś",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1901931,
+            "AccountId": "LID-AUTH-USER-8315-7N7QWRII3ELY7I8YN3KI",
+            "AccountNumericIdentifier": 3659537,
+            "FirstName": "Yevhenia",
+            "LastName": "Mykhailova",
+            "IsPedagogue": true,
+            "IsEmployee": true,
+            "GroupId": 10
+        },
+        {
+            "Id": 1902566,
+            "AccountId": "LID-AUTH-USER-8315-NFFUYWDTUZ68CXT8JRXB",
+            "AccountNumericIdentifier": 3660826,
+            "FirstName": "Izabela",
+            "LastName": "Rejek",
+            "IsEmployee": true,
+            "GroupId": 4
+        },
+        {
+            "Id": 1903318,
+            "AccountId": "LID-AUTH-USER-8315-EBQ68QHB5LTVF3EPJYLF",
+            "AccountNumericIdentifier": 3662274,
+            "FirstName": "Marta",
+            "LastName": "Jańczyk",
+            "IsEmployee": true,
+            "GroupId": 4
+        }
+    ],
+    "pagination": {
+        "limit": 155,
+        "page": 1,
+        "total": 155
+    },
+    "Resources": {
+        "Users\\CrossedOutStudents": {
+            "Url": "https://api.librus.pl/2.0/Users/CrossedOutStudents"
+        },
+        "..": {
+            "Url": "https://api.librus.pl/2.0/Root"
+        }
+    },
+    "Url": "https://api.librus.pl/2.0/Users"
+}

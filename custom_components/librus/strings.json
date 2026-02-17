@@ -26,5 +26,12 @@
       "already_configured": "Integration is already configured",
       "reconfigure_successful": "Credentials updated successfully"
     }
+  },
+  "entity": {
+    "sensor": {
+      "homework": {
+        "name": "Homework"
+      }
+    }
   }
 }

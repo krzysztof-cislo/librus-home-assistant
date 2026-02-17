@@ -1,0 +1,12 @@
+{
+    "LuckyNumber": {
+        "LuckyNumber": 1,
+        "LuckyNumberDay": "2026-02-17"
+    },
+    "Resources": {
+        "..": {
+            "Url": "https://api.librus.pl/2.0/Root"
+        }
+    },
+    "Url": "https://api.librus.pl/2.0/LuckyNumbers"
+}
