@@ -1,0 +1,448 @@
+{
+    "Lessons": [
+        {
+            "Id": 3112300,
+            "Teacher": {
+                "Id": 1493493,
+                "Url": "https://api.librus.pl/2.0/Users/1493493"
+            },
+            "Subject": {
+                "Id": 25674,
+                "Url": "https://api.librus.pl/2.0/Subjects/25674"
+            }
+        },
+        {
+            "Id": 3393606,
+            "Teacher": {
+                "Id": 1493493,
+                "Url": "https://api.librus.pl/2.0/Users/1493493"
+            },
+            "Subject": {
+                "Id": 54904,
+                "Url": "https://api.librus.pl/2.0/Subjects/54904"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 3393609,
+            "Teacher": {
+                "Id": 1526021,
+                "Url": "https://api.librus.pl/2.0/Users/1526021"
+            },
+            "Subject": {
+                "Id": 25688,
+                "Url": "https://api.librus.pl/2.0/Subjects/25688"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 3481372,
+            "Teacher": {
+                "Id": 1758243,
+                "Url": "https://api.librus.pl/2.0/Users/1758243"
+            },
+            "Subject": {
+                "Id": 25690,
+                "Url": "https://api.librus.pl/2.0/Subjects/25690"
+            }
+        },
+        {
+            "Id": 3482814,
+            "Teacher": {
+                "Id": 1493493,
+                "Url": "https://api.librus.pl/2.0/Users/1493493"
+            },
+            "Subject": {
+                "Id": 25674,
+                "Url": "https://api.librus.pl/2.0/Subjects/25674"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 3588989,
+            "Teacher": {
+                "Id": 1493493,
+                "Url": "https://api.librus.pl/2.0/Users/1493493"
+            },
+            "Subject": {
+                "Id": 62767,
+                "Url": "https://api.librus.pl/2.0/Subjects/62767"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 3770291,
+            "Teacher": {
+                "Id": 1589959,
+                "Url": "https://api.librus.pl/2.0/Users/1589959"
+            },
+            "Subject": {
+                "Id": 25680,
+                "Url": "https://api.librus.pl/2.0/Subjects/25680"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 3770293,
+            "Teacher": {
+                "Id": 1526096,
+                "Url": "https://api.librus.pl/2.0/Users/1526096"
+            },
+            "Subject": {
+                "Id": 25686,
+                "Url": "https://api.librus.pl/2.0/Subjects/25686"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 3770294,
+            "Teacher": {
+                "Id": 1526097,
+                "Url": "https://api.librus.pl/2.0/Users/1526097"
+            },
+            "Subject": {
+                "Id": 25685,
+                "Url": "https://api.librus.pl/2.0/Subjects/25685"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 3770295,
+            "Teacher": {
+                "Id": 1589959,
+                "Url": "https://api.librus.pl/2.0/Users/1589959"
+            },
+            "Subject": {
+                "Id": 25689,
+                "Url": "https://api.librus.pl/2.0/Subjects/25689"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 3770296,
+            "Teacher": {
+                "Id": 1589959,
+                "Url": "https://api.librus.pl/2.0/Users/1589959"
+            },
+            "Subject": {
+                "Id": 25677,
+                "Url": "https://api.librus.pl/2.0/Subjects/25677"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 3770487,
+            "Teacher": {
+                "Id": 1649837,
+                "Url": "https://api.librus.pl/2.0/Users/1649837"
+            },
+            "Subject": {
+                "Id": 25681,
+                "Url": "https://api.librus.pl/2.0/Subjects/25681"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 3770506,
+            "Teacher": {
+                "Id": 1818317,
+                "Url": "https://api.librus.pl/2.0/Users/1818317"
+            },
+            "Subject": {
+                "Id": 25691,
+                "Url": "https://api.librus.pl/2.0/Subjects/25691"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 3828989,
+            "Teacher": {
+                "Id": 1525935,
+                "Url": "https://api.librus.pl/2.0/Users/1525935"
+            },
+            "Subject": {
+                "Id": 25684,
+                "Url": "https://api.librus.pl/2.0/Subjects/25684"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 3831113,
+            "Teacher": {
+                "Id": 1758243,
+                "Url": "https://api.librus.pl/2.0/Users/1758243"
+            },
+            "Subject": {
+                "Id": 25690,
+                "Url": "https://api.librus.pl/2.0/Subjects/25690"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 3835735,
+            "Teacher": {
+                "Id": 1649841,
+                "Url": "https://api.librus.pl/2.0/Users/1649841"
+            },
+            "Subject": {
+                "Id": 25674,
+                "Url": "https://api.librus.pl/2.0/Subjects/25674"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 3836650,
+            "Teacher": {
+                "Id": 1553365,
+                "Url": "https://api.librus.pl/2.0/Users/1553365"
+            },
+            "Subject": {
+                "Id": 25687,
+                "Url": "https://api.librus.pl/2.0/Subjects/25687"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 3943841,
+            "Teacher": {
+                "Id": 1540548,
+                "Url": "https://api.librus.pl/2.0/Users/1540548"
+            },
+            "Subject": {
+                "Id": 25672,
+                "Url": "https://api.librus.pl/2.0/Subjects/25672"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 3943842,
+            "Teacher": {
+                "Id": 1540238,
+                "Url": "https://api.librus.pl/2.0/Users/1540238"
+            },
+            "Subject": {
+                "Id": 25688,
+                "Url": "https://api.librus.pl/2.0/Subjects/25688"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 3943937,
+            "Teacher": {
+                "Id": 1493433,
+                "Url": "https://api.librus.pl/2.0/Users/1493433"
+            },
+            "Subject": {
+                "Id": 25691,
+                "Url": "https://api.librus.pl/2.0/Subjects/25691"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 3943989,
+            "Teacher": {
+                "Id": 1526149,
+                "Url": "https://api.librus.pl/2.0/Users/1526149"
+            },
+            "Subject": {
+                "Id": 25676,
+                "Url": "https://api.librus.pl/2.0/Subjects/25676"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 4109950,
+            "Teacher": {
+                "Id": 1890192,
+                "Url": "https://api.librus.pl/2.0/Users/1890192"
+            },
+            "Subject": {
+                "Id": 25683,
+                "Url": "https://api.librus.pl/2.0/Subjects/25683"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 4109951,
+            "Teacher": {
+                "Id": 1493507,
+                "Url": "https://api.librus.pl/2.0/Users/1493507"
+            },
+            "Subject": {
+                "Id": 25678,
+                "Url": "https://api.librus.pl/2.0/Subjects/25678"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 4109952,
+            "Teacher": {
+                "Id": 1818307,
+                "Url": "https://api.librus.pl/2.0/Users/1818307"
+            },
+            "Subject": {
+                "Id": 25676,
+                "Url": "https://api.librus.pl/2.0/Subjects/25676"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 4110048,
+            "Teacher": {
+                "Id": 1859608,
+                "Url": "https://api.librus.pl/2.0/Users/1859608"
+            },
+            "Subject": {
+                "Id": 25691,
+                "Url": "https://api.librus.pl/2.0/Subjects/25691"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 4110085,
+            "Teacher": {
+                "Id": 1818309,
+                "Url": "https://api.librus.pl/2.0/Users/1818309"
+            },
+            "Subject": {
+                "Id": 25672,
+                "Url": "https://api.librus.pl/2.0/Subjects/25672"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 4142509,
+            "Teacher": {
+                "Id": 1704708,
+                "Url": "https://api.librus.pl/2.0/Users/1704708"
+            },
+            "Subject": {
+                "Id": 67990,
+                "Url": "https://api.librus.pl/2.0/Subjects/67990"
+            }
+        },
+        {
+            "Id": 4142604,
+            "Teacher": {
+                "Id": 1493453,
+                "Url": "https://api.librus.pl/2.0/Users/1493453"
+            },
+            "Subject": {
+                "Id": 67990,
+                "Url": "https://api.librus.pl/2.0/Subjects/67990"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 4181271,
+            "Teacher": {
+                "Id": 1704708,
+                "Url": "https://api.librus.pl/2.0/Users/1704708"
+            },
+            "Subject": {
+                "Id": 67990,
+                "Url": "https://api.librus.pl/2.0/Subjects/67990"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        },
+        {
+            "Id": 4182863,
+            "Teacher": {
+                "Id": 1540548,
+                "Url": "https://api.librus.pl/2.0/Users/1540548"
+            },
+            "Subject": {
+                "Id": 25674,
+                "Url": "https://api.librus.pl/2.0/Subjects/25674"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            }
+        }
+    ],
+    "Resources": {
+        "..": {
+            "Url": "https://api.librus.pl/2.0/Root"
+        }
+    },
+    "Url": "https://api.librus.pl/2.0/Lessons"
+}

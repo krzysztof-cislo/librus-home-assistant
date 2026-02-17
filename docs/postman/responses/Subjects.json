@@ -1,0 +1,162 @@
+{
+    "Subjects": [
+        {
+            "Id": 25672,
+            "Name": "Biologia",
+            "No": 1,
+            "Short": "bio",
+            "IsExtracurricular": false,
+            "IsBlockLesson": false
+        },
+        {
+            "Id": 25674,
+            "Name": "Etyka",
+            "No": 3,
+            "Short": "et",
+            "IsExtracurricular": false,
+            "IsBlockLesson": false
+        },
+        {
+            "Id": 25676,
+            "Name": "Geografia",
+            "No": 5,
+            "Short": "ge",
+            "IsExtracurricular": false,
+            "IsBlockLesson": false
+        },
+        {
+            "Id": 25677,
+            "Name": "Godzina wychowawcza",
+            "No": 6,
+            "Short": "gw",
+            "IsExtracurricular": false,
+            "IsBlockLesson": false
+        },
+        {
+            "Id": 25678,
+            "Name": "Historia",
+            "No": 7,
+            "Short": "hi",
+            "IsExtracurricular": false,
+            "IsBlockLesson": false
+        },
+        {
+            "Id": 25680,
+            "Name": "Informatyka",
+            "No": 9,
+            "Short": "inf",
+            "IsExtracurricular": false,
+            "IsBlockLesson": false
+        },
+        {
+            "Id": 25681,
+            "Name": "Język angielski",
+            "No": 10,
+            "Short": "ja",
+            "IsExtracurricular": false,
+            "IsBlockLesson": false
+        },
+        {
+            "Id": 25683,
+            "Name": "Język polski",
+            "No": 12,
+            "Short": "jp",
+            "IsExtracurricular": false,
+            "IsBlockLesson": false
+        },
+        {
+            "Id": 25684,
+            "Name": "Matematyka",
+            "No": 13,
+            "Short": "mt",
+            "IsExtracurricular": false,
+            "IsBlockLesson": false
+        },
+        {
+            "Id": 25685,
+            "Name": "Muzyka",
+            "No": 14,
+            "Short": "mz",
+            "IsExtracurricular": false,
+            "IsBlockLesson": false
+        },
+        {
+            "Id": 25686,
+            "Name": "Plastyka",
+            "No": 15,
+            "Short": "pl",
+            "IsExtracurricular": false,
+            "IsBlockLesson": false
+        },
+        {
+            "Id": 25687,
+            "Name": "Przyroda",
+            "No": 16,
+            "Short": "prz",
+            "IsExtracurricular": false,
+            "IsBlockLesson": false
+        },
+        {
+            "Id": 25688,
+            "Name": "Religia",
+            "No": 17,
+            "Short": "re",
+            "IsExtracurricular": false,
+            "IsBlockLesson": false
+        },
+        {
+            "Id": 25689,
+            "Name": "Technika",
+            "No": 18,
+            "Short": "tech",
+            "IsExtracurricular": false,
+            "IsBlockLesson": false
+        },
+        {
+            "Id": 25690,
+            "Name": "Wychowanie do życia w rodzinie",
+            "No": 19,
+            "Short": "wdż",
+            "IsExtracurricular": true,
+            "IsBlockLesson": false
+        },
+        {
+            "Id": 25691,
+            "Name": "Wychowanie fizyczne",
+            "No": 20,
+            "Short": "wf",
+            "IsExtracurricular": false,
+            "IsBlockLesson": false
+        },
+        {
+            "Id": 54904,
+            "Name": "godz.dyr.oo",
+            "No": 95,
+            "Short": "gd.o",
+            "IsExtracurricular": false,
+            "IsBlockLesson": false
+        },
+        {
+            "Id": 62767,
+            "Name": "BASEN",
+            "No": 96,
+            "Short": "Bas",
+            "IsExtracurricular": false,
+            "IsBlockLesson": false
+        },
+        {
+            "Id": 67990,
+            "Name": "Edukacja zdrowotna",
+            "No": 97,
+            "Short": "Ez",
+            "IsExtracurricular": true,
+            "IsBlockLesson": false
+        }
+    ],
+    "Resources": {
+        "..": {
+            "Url": "https://api.librus.pl/2.0/Root"
+        }
+    },
+    "Url": "https://api.librus.pl/2.0/Subjects"
+}

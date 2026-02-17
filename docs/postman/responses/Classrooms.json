@@ -1,0 +1,484 @@
+{
+    "Classrooms": [
+        {
+            "Id": 655,
+            "Name": "świetlica szkolna",
+            "Symbol": "świetlica",
+            "Size": 0,
+            "SchoolCommonRoom": true,
+            "Description": ""
+        },
+        {
+            "Id": 2187,
+            "Name": "A2",
+            "Symbol": "A2",
+            "Size": 0,
+            "SchoolCommonRoom": false,
+            "Description": ""
+        },
+        {
+            "Id": 2188,
+            "Name": "A6",
+            "Symbol": "A6",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2189,
+            "Name": "A7",
+            "Symbol": "A7",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2190,
+            "Name": "B4",
+            "Symbol": "B4",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2191,
+            "Name": "B5",
+            "Symbol": "B5",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2192,
+            "Name": "B6",
+            "Symbol": "B6",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2193,
+            "Name": "Basen",
+            "Symbol": "BA",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2194,
+            "Name": "C1",
+            "Symbol": "C1",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2195,
+            "Name": "C12",
+            "Symbol": "C12",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2196,
+            "Name": "C2",
+            "Symbol": "C2",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2197,
+            "Name": "C3",
+            "Symbol": "C3",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2198,
+            "Name": "C4",
+            "Symbol": "C4",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2199,
+            "Name": "C5",
+            "Symbol": "C5",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2200,
+            "Name": "C6",
+            "Symbol": "C6",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2201,
+            "Name": "C7",
+            "Symbol": "C7",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2202,
+            "Name": "D15SK",
+            "Symbol": "D15S",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2203,
+            "Name": "D16",
+            "Symbol": "D16",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2204,
+            "Name": "D17",
+            "Symbol": "D17",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2205,
+            "Name": "D18",
+            "Symbol": "D18",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2206,
+            "Name": "D19",
+            "Symbol": "D19",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2207,
+            "Name": "Hala sportowa",
+            "Symbol": "HS",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2208,
+            "Name": "Korytarz/Biblioteka",
+            "Symbol": "KB",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2209,
+            "Name": "Korytarz/Hol",
+            "Symbol": "KH",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2210,
+            "Name": "Sala gimnastyczna",
+            "Symbol": "SG",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 2985,
+            "Name": "Aula",
+            "Symbol": "Au",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 3124,
+            "Name": "V1",
+            "Symbol": "V1",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 3125,
+            "Name": "V2",
+            "Symbol": "V2",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 3126,
+            "Name": "V3",
+            "Symbol": "V3",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 3127,
+            "Name": "V4",
+            "Symbol": "V4",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 4085,
+            "Name": "E1",
+            "Symbol": "E1",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 4086,
+            "Name": "E2",
+            "Symbol": "E2",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 4087,
+            "Name": "E3",
+            "Symbol": "E3",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 4088,
+            "Name": "Basen1",
+            "Symbol": "Bas1",
+            "Size": 0,
+            "SchoolCommonRoom": false,
+            "Description": ""
+        },
+        {
+            "Id": 4089,
+            "Name": "Basen2",
+            "Symbol": "Bas2",
+            "Size": 0,
+            "SchoolCommonRoom": false,
+            "Description": ""
+        },
+        {
+            "Id": 6288,
+            "Name": "A1",
+            "Symbol": "A1",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 6289,
+            "Name": "A3",
+            "Symbol": "A3",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 6290,
+            "Name": "A4",
+            "Symbol": "A4",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 6291,
+            "Name": "A5",
+            "Symbol": "A5",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 6292,
+            "Name": "Basen3",
+            "Symbol": "Bas3",
+            "Size": 0,
+            "SchoolCommonRoom": false,
+            "Description": ""
+        },
+        {
+            "Id": 6293,
+            "Name": "HolA",
+            "Symbol": "HolA",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 8501,
+            "Name": "Biblio",
+            "Symbol": "Bibl",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 8502,
+            "Name": "Hol1",
+            "Symbol": "Hol1",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 8503,
+            "Name": "Hol2",
+            "Symbol": "Hol2",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 8504,
+            "Name": "Hol3",
+            "Symbol": "Hol3",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 9751,
+            "Name": "B1",
+            "Symbol": "B1",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 9752,
+            "Name": "B1a",
+            "Symbol": "B1a",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 9753,
+            "Name": "E0",
+            "Symbol": "E0",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 11131,
+            "Name": "BS12",
+            "Symbol": "BS12",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 11132,
+            "Name": "E4",
+            "Symbol": "E4",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 11133,
+            "Name": "Hol4",
+            "Symbol": "Hol4",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 12387,
+            "Name": "F016",
+            "Symbol": "F016",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 12388,
+            "Name": "FI3",
+            "Symbol": "FI3",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 12389,
+            "Name": "FI4",
+            "Symbol": "FI4",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 12390,
+            "Name": "FI5",
+            "Symbol": "FI5",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 12391,
+            "Name": "FI6",
+            "Symbol": "FI6",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 12392,
+            "Name": "FI7",
+            "Symbol": "FI7",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 12393,
+            "Name": "FII1",
+            "Symbol": "FII1",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 12394,
+            "Name": "FII2",
+            "Symbol": "FII2",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 12395,
+            "Name": "FII3",
+            "Symbol": "FII3",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 12396,
+            "Name": "FII4",
+            "Symbol": "FII4",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 12397,
+            "Name": "FII5",
+            "Symbol": "FII5",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 12398,
+            "Name": "FII6",
+            "Symbol": "FII6",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 12399,
+            "Name": "FII7",
+            "Symbol": "FII7",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 12400,
+            "Name": "FII8",
+            "Symbol": "FII8",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 12401,
+            "Name": "FKom",
+            "Symbol": "FKom",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        },
+        {
+            "Id": 12402,
+            "Name": "Hala F",
+            "Symbol": "HF",
+            "Size": 0,
+            "SchoolCommonRoom": false
+        }
+    ],
+    "Resources": {
+        "..": {
+            "Url": "https://api.librus.pl/2.0/Root"
+        }
+    },
+    "Url": "https://api.librus.pl/2.0/Classrooms"
+}

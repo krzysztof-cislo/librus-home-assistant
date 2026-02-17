@@ -1,51 +1,14 @@
 {
 	"info": {
-		"_postman_id": "librus-api-collection-v2",
+		"_postman_id": "15f646fc-7195-4bb0-a2d6-df8cfef4bf75",
 		"name": "Librus Synergia API",
 		"description": "Kolekcja do testowania API Librusa (Synergia).\n\nŹródła:\n- JSON REST API: https://github.com/dani3l0/librusik (działająca biblioteka Python)\n- HTML scraping (wiadomości): https://github.com/Mati365/librus-api\n\n## Architektura API Librusa\n\nLibrus udostępnia **DWA** interfejsy:\n1. **JSON REST API** pod `https://synergia.librus.pl/gateway/api/2.0/` — oceny, plan lekcji, frekwencja, zadania, dni wolne itd. Zwraca JSON.\n2. **HTML (web scraping)** pod `https://synergia.librus.pl/` — wiadomości, ogłoszenia. Zwraca HTML strony.\n\n## Jak używać\n\n### 1. Ustaw dane logowania\nKliknij na nazwę kolekcji → zakładka **Variables** → ustaw `login` i `password`.\n\n### 2. Zaloguj się (folder Auth)\nUruchom **po kolei** 4 requesty:\n- **Step 1** — OAuth Init (GET)\n- **Step 2** — OAuth Login (POST z credentials)\n- **Step 3** — OAuth Grant (GET) — tu ustawiają się cookies sesyjne\n- **Step 4** — Activate API Access (GET TokenInfo → GET UserInfo)\n\n### 3. Zweryfikuj sesję\nUruchom **Get Me** z folderu Info — jeśli zwróci JSON z Twoimi danymi, sesja jest aktywna.\n\n### 4. Testuj endpointy\nWszystkie endpointy z folderu JSON API zwracają dane w formacie JSON.\nEndpointy z folderu Messages (HTML) zwracają HTML — użyj zakładki Preview w Postmanie.\n\n### Cookies\nPostman automatycznie zarządza cookies przez Cookie Manager. Po Step 3 sprawdź w Cookie Manager (ikona na dole) czy `synergia.librus.pl` ma cookies sesyjne.\n\n### Gdy sesja wygaśnie\nUruchom ponownie kroki Auth (Step 1→4).",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "270374"
 	},
-	"variable": [
-		{
-			"key": "base_url",
-			"value": "https://synergia.librus.pl",
-			"type": "string"
-		},
-		{
-			"key": "api_url",
-			"value": "https://synergia.librus.pl/gateway/api/2.0",
-			"type": "string"
-		},
-		{
-			"key": "oauth_url",
-			"value": "https://api.librus.pl",
-			"type": "string"
-		},
-		{
-			"key": "login",
-			"value": "TWOJ_LOGIN",
-			"type": "string"
-		},
-		{
-			"key": "password",
-			"value": "TWOJE_HASLO",
-			"type": "string"
-		},
-		{
-			"key": "user_identifier",
-			"value": "",
-			"type": "string"
-		},
-		{
-			"key": "csrf_token",
-			"value": "",
-			"type": "string"
-		}
-	],
 	"item": [
 		{
 			"name": "Auth",
-			"description": "Logowanie OAuth do Librusa.\n\nKOLEJNOŚĆ: Step 1 → Step 2 → Step 3 → Step 4 (ściśle po kolei!)\n\nFlow (na podstawie działającej biblioteki librusik):\n1. Step 1 (GET) — inicjalizacja sesji OAuth na api.librus.pl\n2. Step 2 (POST) — wysłanie login+hasło\n3. Step 3 (GET) — OAuth Grant — serwer przez redirecty ustawia cookies sesyjne\n4. Step 4 (GET) — aktywacja dostępu do JSON API (TokenInfo → UserInfo)\n\nUWAGA: Krok 3 to /OAuth/Authorization/Grant (NIE /2FA jak w starszych źródłach!).\n\nKażdy krok ma skrypt testowy — wyniki w zakładce Test Results i konsoli (View → Show Postman Console).",
 			"item": [
 				{
 					"name": "Step 1 - OAuth Init",
@@ -76,12 +39,26 @@
 						],
 						"url": {
 							"raw": "{{oauth_url}}/OAuth/Authorization?client_id=46&response_type=code&scope=mydata",
-							"host": ["{{oauth_url}}"],
-							"path": ["OAuth", "Authorization"],
+							"host": [
+								"{{oauth_url}}"
+							],
+							"path": [
+								"OAuth",
+								"Authorization"
+							],
 							"query": [
-								{ "key": "client_id", "value": "46" },
-								{ "key": "response_type", "value": "code" },
-								{ "key": "scope", "value": "mydata" }
+								{
+									"key": "client_id",
+									"value": "46"
+								},
+								{
+									"key": "response_type",
+									"value": "code"
+								},
+								{
+									"key": "scope",
+									"value": "mydata"
+								}
 							]
 						},
 						"description": "KROK 1/4: Inicjalizacja sesji OAuth na api.librus.pl."
@@ -130,17 +107,34 @@
 						"body": {
 							"mode": "urlencoded",
 							"urlencoded": [
-								{ "key": "action", "value": "login" },
-								{ "key": "login", "value": "{{login}}" },
-								{ "key": "pass", "value": "{{password}}" }
+								{
+									"key": "action",
+									"value": "login"
+								},
+								{
+									"key": "login",
+									"value": "{{login}}"
+								},
+								{
+									"key": "pass",
+									"value": "{{password}}"
+								}
 							]
 						},
 						"url": {
 							"raw": "{{oauth_url}}/OAuth/Authorization?client_id=46",
-							"host": ["{{oauth_url}}"],
-							"path": ["OAuth", "Authorization"],
+							"host": [
+								"{{oauth_url}}"
+							],
+							"path": [
+								"OAuth",
+								"Authorization"
+							],
 							"query": [
-								{ "key": "client_id", "value": "46" }
+								{
+									"key": "client_id",
+									"value": "46"
+								}
 							]
 						},
 						"description": "KROK 2/4: Wysłanie loginu i hasła."
@@ -178,10 +172,19 @@
 						],
 						"url": {
 							"raw": "{{oauth_url}}/OAuth/Authorization/Grant?client_id=46",
-							"host": ["{{oauth_url}}"],
-							"path": ["OAuth", "Authorization", "Grant"],
+							"host": [
+								"{{oauth_url}}"
+							],
+							"path": [
+								"OAuth",
+								"Authorization",
+								"Grant"
+							],
 							"query": [
-								{ "key": "client_id", "value": "46" }
+								{
+									"key": "client_id",
+									"value": "46"
+								}
 							]
 						},
 						"description": "KROK 3/4: OAuth Grant — finalizacja logowania.\n\nUWAGA: To jest /Grant (NIE /2FA). Potwierdzone w działającej bibliotece librusik.\n\nPo tym kroku serwer przez łańcuch redirectów ustawia cookies sesyjne na synergia.librus.pl."
@@ -223,8 +226,13 @@
 						],
 						"url": {
 							"raw": "{{api_url}}/Auth/TokenInfo",
-							"host": ["{{api_url}}"],
-							"path": ["Auth", "TokenInfo"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"Auth",
+								"TokenInfo"
+							]
 						},
 						"description": "KROK 4a/4: Pobranie informacji o tokenie sesji.\n\nZwraca JSON z UserIdentifier, który jest potrzebny do aktywacji dostępu do API.\n\nSkrypt automatycznie zapisuje UserIdentifier do zmiennej kolekcji."
 					},
@@ -259,18 +267,24 @@
 						],
 						"url": {
 							"raw": "{{api_url}}/Auth/UserInfo/{{user_identifier}}",
-							"host": ["{{api_url}}"],
-							"path": ["Auth", "UserInfo", "{{user_identifier}}"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"Auth",
+								"UserInfo",
+								"{{user_identifier}}"
+							]
 						},
 						"description": "KROK 4b/4: Aktywacja dostępu do JSON API.\n\nWysyła GET na UserInfo z identyfikatorem z poprzedniego kroku. Po tym kroku JSON API jest w pełni dostępne."
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "Logowanie OAuth do Librusa.\n\nKOLEJNOŚĆ: Step 1 → Step 2 → Step 3 → Step 4 (ściśle po kolei!)\n\nFlow (na podstawie działającej biblioteki librusik):\n1. Step 1 (GET) — inicjalizacja sesji OAuth na api.librus.pl\n2. Step 2 (POST) — wysłanie login+hasło\n3. Step 3 (GET) — OAuth Grant — serwer przez redirecty ustawia cookies sesyjne\n4. Step 4 (GET) — aktywacja dostępu do JSON API (TokenInfo → UserInfo)\n\nUWAGA: Krok 3 to /OAuth/Authorization/Grant (NIE /2FA jak w starszych źródłach!).\n\nKażdy krok ma skrypt testowy — wyniki w zakładce Test Results i konsoli (View → Show Postman Console)."
 		},
 		{
 			"name": "JSON API — Info & Account",
-			"description": "Informacje o uczniu, szkole, klasie, szczęśliwym numerku. Wszystkie zwracają JSON.",
 			"item": [
 				{
 					"name": "Get Me",
@@ -279,8 +293,12 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/Me",
-							"host": ["{{api_url}}"],
-							"path": ["Me"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"Me"
+							]
 						},
 						"description": "Dane zalogowanego użytkownika (imię, nazwisko, typ konta). Dobry test czy sesja jest aktywna."
 					},
@@ -293,8 +311,12 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/UserProfile",
-							"host": ["{{api_url}}"],
-							"path": ["UserProfile"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"UserProfile"
+							]
 						},
 						"description": "Profil użytkownika (typ jednostki organizacyjnej itp.)."
 					},
@@ -307,8 +329,12 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/Classes",
-							"host": ["{{api_url}}"],
-							"path": ["Classes"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"Classes"
+							]
 						},
 						"description": "Informacje o klasie: numer, symbol, wychowawca, daty roku szkolnego (początek, koniec I semestru, koniec)."
 					},
@@ -321,8 +347,12 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/Schools",
-							"host": ["{{api_url}}"],
-							"path": ["Schools"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"Schools"
+							]
 						},
 						"description": "Informacje o szkole."
 					},
@@ -335,8 +365,12 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/LuckyNumbers",
-							"host": ["{{api_url}}"],
-							"path": ["LuckyNumbers"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"LuckyNumbers"
+							]
 						},
 						"description": "Szczęśliwy numerek na dziś. Pole: LuckyNumber.LuckyNumber."
 					},
@@ -349,8 +383,12 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/Subjects",
-							"host": ["{{api_url}}"],
-							"path": ["Subjects"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"Subjects"
+							]
 						},
 						"description": "Lista wszystkich przedmiotów (Id + Name). Potrzebne do mapowania Id przedmiotu na nazwę w ocenach, frekwencji itp."
 					},
@@ -363,8 +401,12 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/Users",
-							"host": ["{{api_url}}"],
-							"path": ["Users"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"Users"
+							]
 						},
 						"description": "Lista nauczycieli/użytkowników (Id, FirstName, LastName). Potrzebne do mapowania Id nauczyciela na imię w ocenach, frekwencji itp."
 					},
@@ -377,18 +419,40 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/Lessons",
-							"host": ["{{api_url}}"],
-							"path": ["Lessons"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"Lessons"
+							]
+						},
+						"description": "Lista lekcji (mapowanie Lesson Id → Subject Id). Potrzebne do frekwencji."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Classrooms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/Classrooms",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"Classrooms"
+							]
 						},
 						"description": "Lista lekcji (mapowanie Lesson Id → Subject Id). Potrzebne do frekwencji."
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "Informacje o uczniu, szkole, klasie, szczęśliwym numerku. Wszystkie zwracają JSON."
 		},
 		{
 			"name": "JSON API — Grades (Oceny)",
-			"description": "Oceny, kategorie ocen, komentarze, oceny z zachowania.",
 			"item": [
 				{
 					"name": "Get Grades",
@@ -397,10 +461,69 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/Grades",
-							"host": ["{{api_url}}"],
-							"path": ["Grades"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"Grades"
+							]
 						},
 						"description": "Wszystkie oceny ucznia. Każda ocena zawiera: Grade (wartość), Subject.Id, Category.Id, AddedBy.Id, Semester, AddDate, IsFinal, IsSemester itd.\n\nAby uzyskać pełne dane, połącz z: Subjects (nazwy przedmiotów), Users (nauczyciele), Grades/Categories (wagi), Grades/Comments."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Grades Averages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/Grades/Averages",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"Grades",
+								"Averages"
+							]
+						},
+						"description": "Wszystkie oceny ucznia. Każda ocena zawiera: Grade (wartość), Subject.Id, Category.Id, AddedBy.Id, Semester, AddDate, IsFinal, IsSemester itd.\n\nAby uzyskać pełne dane, połącz z: Subjects (nazwy przedmiotów), Users (nauczyciele), Grades/Categories (wagi), Grades/Comments."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Periodic Grade Averages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/Me/PeriodicGradeAverages",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"Me",
+								"PeriodicGradeAverages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Behaviour Descriptive Grades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/Me/BehaviourDescriptiveGrades",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"Me",
+								"BehaviourDescriptiveGrades"
+							]
+						}
 					},
 					"response": []
 				},
@@ -411,8 +534,13 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/Grades/Categories",
-							"host": ["{{api_url}}"],
-							"path": ["Grades", "Categories"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"Grades",
+								"Categories"
+							]
 						},
 						"description": "Kategorie ocen z wagami (Name, Weight). Mapuj Category.Id z oceny na te kategorie."
 					},
@@ -425,8 +553,13 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/Grades/Comments",
-							"host": ["{{api_url}}"],
-							"path": ["Grades", "Comments"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"Grades",
+								"Comments"
+							]
 						},
 						"description": "Komentarze do ocen (Id → Text). Niektóre oceny mają pole Comments z listą Id komentarzy."
 					},
@@ -439,18 +572,22 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/BehaviourGrades",
-							"host": ["{{api_url}}"],
-							"path": ["BehaviourGrades"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"BehaviourGrades"
+							]
 						},
 						"description": "Oceny z zachowania. GradeType.Id mapuje na: 1=wzorowe, 2=bardzo dobre, 3=dobre, 4=poprawne, 5=nieodpowiednie, 6=naganne."
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "Oceny, kategorie ocen, komentarze, oceny z zachowania."
 		},
 		{
 			"name": "JSON API — Timetable (Plan lekcji)",
-			"description": "Plan lekcji i sale lekcyjne.",
 			"item": [
 				{
 					"name": "Get Timetable (Week)",
@@ -459,8 +596,12 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/Timetables?weekStart=2026-02-16",
-							"host": ["{{api_url}}"],
-							"path": ["Timetables"],
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"Timetables"
+							],
 							"query": [
 								{
 									"key": "weekStart",
@@ -480,12 +621,28 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/Timetables/OtherActivitiesRegister?dateFrom=2026-02-16&dateTo=2026-02-22&hideOutdatedEntries=false",
-							"host": ["{{api_url}}"],
-							"path": ["Timetables", "OtherActivitiesRegister"],
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"Timetables",
+								"OtherActivitiesRegister"
+							],
 							"query": [
-								{ "key": "dateFrom", "value": "2026-02-16", "description": "Data od (YYYY-MM-DD)" },
-								{ "key": "dateTo", "value": "2026-02-22", "description": "Data do (YYYY-MM-DD)" },
-								{ "key": "hideOutdatedEntries", "value": "false" }
+								{
+									"key": "dateFrom",
+									"value": "2026-02-16",
+									"description": "Data od (YYYY-MM-DD)"
+								},
+								{
+									"key": "dateTo",
+									"value": "2026-02-22",
+									"description": "Data do (YYYY-MM-DD)"
+								},
+								{
+									"key": "hideOutdatedEntries",
+									"value": "false"
+								}
 							]
 						},
 						"description": "Dodatkowe aktywności w planie lekcji (np. zastępstwa, zajęcia dodatkowe) na podany zakres dat."
@@ -499,18 +656,22 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/TimetableEntries",
-							"host": ["{{api_url}}"],
-							"path": ["TimetableEntries"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"TimetableEntries"
+							]
 						},
 						"description": "Wpisy planu lekcji — użyteczne do wyciągnięcia listy sal lekcyjnych (Classroom.Id → Classroom.Name)."
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "Plan lekcji i sale lekcyjne."
 		},
 		{
 			"name": "JSON API — Attendance (Frekwencja)",
-			"description": "Frekwencja / obecności / nieobecności ucznia.",
 			"item": [
 				{
 					"name": "Get Attendances",
@@ -519,8 +680,12 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/Attendances",
-							"host": ["{{api_url}}"],
-							"path": ["Attendances"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"Attendances"
+							]
 						},
 						"description": "Wszystkie wpisy frekwencji. Każdy wpis: Lesson.Id, Type.Id, AddDate, Date, AddedBy.Id.\n\nPołącz z: Attendances/Types (typy), Lessons (mapowanie lekcja→przedmiot), Subjects (nazwy), Users (nauczyciele)."
 					},
@@ -533,18 +698,23 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/Attendances/Types",
-							"host": ["{{api_url}}"],
-							"path": ["Attendances", "Types"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"Attendances",
+								"Types"
+							]
 						},
 						"description": "Typy frekwencji (Id, Name, Short, IsPresenceKind). IsPresenceKind=true oznacza obecność, false=nieobecność."
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "Frekwencja / obecności / nieobecności ucznia."
 		},
 		{
 			"name": "JSON API — Homework & Exams",
-			"description": "Zadania domowe, sprawdziany, kartkówki.",
 			"item": [
 				{
 					"name": "Get HomeWorks (Exams)",
@@ -553,8 +723,12 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/HomeWorks",
-							"host": ["{{api_url}}"],
-							"path": ["HomeWorks"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"HomeWorks"
+							]
 						},
 						"description": "Lista zadań domowych / sprawdzianów / kartkówek.\nKażdy wpis: Subject.Id, CreatedBy.Id, Category.Id, Date, TimeFrom, TimeTo, Content, AddDate.\n\nPołącz z: HomeWorks/Categories (typ), Subjects, Users."
 					},
@@ -567,18 +741,23 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/HomeWorks/Categories",
-							"host": ["{{api_url}}"],
-							"path": ["HomeWorks", "Categories"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"HomeWorks",
+								"Categories"
+							]
 						},
 						"description": "Kategorie zadań (sprawdzian, kartkówka, praca domowa itp.)."
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "Zadania domowe, sprawdziany, kartkówki."
 		},
 		{
 			"name": "JSON API — Free Days & Events",
-			"description": "Dni wolne, wywiadówki, nieobecności nauczycieli.",
 			"item": [
 				{
 					"name": "Get School Free Days",
@@ -587,8 +766,12 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/SchoolFreeDays",
-							"host": ["{{api_url}}"],
-							"path": ["SchoolFreeDays"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"SchoolFreeDays"
+							]
 						},
 						"description": "Dni wolne od szkoły (ferie, święta, dni dyrektorskie). Każdy wpis: Name, DateFrom, DateTo."
 					},
@@ -601,8 +784,12 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/TeacherFreeDays",
-							"host": ["{{api_url}}"],
-							"path": ["TeacherFreeDays"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"TeacherFreeDays"
+							]
 						},
 						"description": "Nieobecności nauczycieli (zwolnienia, zastępstwa). Każdy wpis: Teacher.Id, DateFrom, DateTo."
 					},
@@ -615,18 +802,22 @@
 						"header": [],
 						"url": {
 							"raw": "{{api_url}}/ParentTeacherConferences",
-							"host": ["{{api_url}}"],
-							"path": ["ParentTeacherConferences"]
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"ParentTeacherConferences"
+							]
 						},
 						"description": "Wywiadówki / zebrania z rodzicami."
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "Dni wolne, wywiadówki, nieobecności nauczycieli."
 		},
 		{
 			"name": "HTML — Messages (Wiadomości)",
-			"description": "Wiadomości — jedyny moduł który wymaga HTML scrapingu, bo JSON API nie udostępnia wiadomości.\n\nEndpointy zwracają HTML — użyj zakładki Preview w Postmanie do podglądu.",
 			"item": [
 				{
 					"name": "List Messages (Inbox)",
@@ -640,8 +831,12 @@
 						],
 						"url": {
 							"raw": "{{base_url}}/wiadomosci",
-							"host": ["{{base_url}}"],
-							"path": ["wiadomosci"]
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wiadomosci"
+							]
 						},
 						"description": "Lista wiadomości w skrzynce odbiorczej (HTML). Tabela z kolumnami: nadawca, temat, data. Linki do poszczególnych wiadomości."
 					},
@@ -659,8 +854,13 @@
 						],
 						"url": {
 							"raw": "{{base_url}}/wiadomosci/6",
-							"host": ["{{base_url}}"],
-							"path": ["wiadomosci", "6"]
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wiadomosci",
+								"6"
+							]
 						},
 						"description": "Lista odebranych wiadomości (folder 6 = odebrane)."
 					},
@@ -678,8 +878,13 @@
 						],
 						"url": {
 							"raw": "{{base_url}}/wiadomosci/5",
-							"host": ["{{base_url}}"],
-							"path": ["wiadomosci", "5"]
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wiadomosci",
+								"5"
+							]
 						},
 						"description": "Lista wysłanych wiadomości (folder 5 = wysłane)."
 					},
@@ -697,8 +902,15 @@
 						],
 						"url": {
 							"raw": "{{base_url}}/wiadomosci/1/:folderId/:messageId",
-							"host": ["{{base_url}}"],
-							"path": ["wiadomosci", "1", ":folderId", ":messageId"],
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wiadomosci",
+								"1",
+								":folderId",
+								":messageId"
+							],
 							"variable": [
 								{
 									"key": "folderId",
@@ -731,8 +943,15 @@
 						],
 						"url": {
 							"raw": "{{base_url}}/wiadomosci/pobierz_zalacznik/:messageId/:fileId",
-							"host": ["{{base_url}}"],
-							"path": ["wiadomosci", "pobierz_zalacznik", ":messageId", ":fileId"],
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wiadomosci",
+								"pobierz_zalacznik",
+								":messageId",
+								":fileId"
+							],
 							"variable": [
 								{
 									"key": "messageId",
@@ -761,9 +980,13 @@
 							}
 						],
 						"url": {
-							"raw": "https://REDIRECT_URL_FROM_PREVIOUS_STEP/get",
-							"host": ["REDIRECT_URL_FROM_PREVIOUS_STEP"],
-							"path": ["get"]
+							"raw": "REDIRECT_URL_FROM_PREVIOUS_STEP/get",
+							"host": [
+								"REDIRECT_URL_FROM_PREVIOUS_STEP"
+							],
+							"path": [
+								"get"
+							]
 						},
 						"description": "Bezpośrednie pobranie pliku. Wklej URL z nagłówka Location z poprzedniego kroku i dodaj /get na końcu."
 					},
@@ -781,8 +1004,12 @@
 						],
 						"url": {
 							"raw": "{{base_url}}/ogloszenia",
-							"host": ["{{base_url}}"],
-							"path": ["ogloszenia"]
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ogloszenia"
+							]
 						},
 						"description": "Lista ogłoszeń szkolnych (HTML)."
 					},
@@ -816,8 +1043,14 @@
 						],
 						"url": {
 							"raw": "{{base_url}}/wiadomosci/2/5",
-							"host": ["{{base_url}}"],
-							"path": ["wiadomosci", "2", "5"]
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wiadomosci",
+								"2",
+								"5"
+							]
 						},
 						"description": "Strona tworzenia wiadomości. Skrypt automatycznie wyciąga CSRF token i zapisuje w zmiennej csrf_token. Uruchom PRZED wysyłaniem wiadomości."
 					},
@@ -840,17 +1073,38 @@
 						"body": {
 							"mode": "urlencoded",
 							"urlencoded": [
-								{ "key": "DoKogo", "value": "12345", "description": "ID odbiorcy" },
-								{ "key": "temat", "value": "Temat wiadomości" },
-								{ "key": "tresc", "value": "Treść wiadomości" },
-								{ "key": "poprzednia", "value": "6" },
-								{ "key": "wyslij", "value": "Wyślij" }
+								{
+									"key": "DoKogo",
+									"value": "12345",
+									"description": "ID odbiorcy"
+								},
+								{
+									"key": "temat",
+									"value": "Temat wiadomości"
+								},
+								{
+									"key": "tresc",
+									"value": "Treść wiadomości"
+								},
+								{
+									"key": "poprzednia",
+									"value": "6"
+								},
+								{
+									"key": "wyslij",
+									"value": "Wyślij"
+								}
 							]
 						},
 						"url": {
 							"raw": "{{base_url}}/wiadomosci/5",
-							"host": ["{{base_url}}"],
-							"path": ["wiadomosci", "5"]
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wiadomosci",
+								"5"
+							]
 						},
 						"description": "Wysłanie wiadomości. Najpierw uruchom 'Get Compose Page' dla CSRF tokenu."
 					},
@@ -881,23 +1135,44 @@
 						"body": {
 							"mode": "formdata",
 							"formdata": [
-								{ "key": "typAdresata", "value": "nauczyciel", "description": "Typ: nauczyciel / wychowawca / bibliotekarz / sekretariat / admin / rodzic" },
-								{ "key": "poprzednia", "value": "5" },
-								{ "key": "tabZaznaczonych", "value": "" },
-								{ "key": "czyWirtualneKlasy", "value": "false" },
-								{ "key": "idGrupy", "value": "0" }
+								{
+									"key": "typAdresata",
+									"value": "nauczyciel",
+									"description": "Typ: nauczyciel / wychowawca / bibliotekarz / sekretariat / admin / rodzic"
+								},
+								{
+									"key": "poprzednia",
+									"value": "5"
+								},
+								{
+									"key": "tabZaznaczonych",
+									"value": ""
+								},
+								{
+									"key": "czyWirtualneKlasy",
+									"value": "false"
+								},
+								{
+									"key": "idGrupy",
+									"value": "0"
+								}
 							]
 						},
 						"url": {
 							"raw": "{{base_url}}/getRecipients",
-							"host": ["{{base_url}}"],
-							"path": ["getRecipients"]
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"getRecipients"
+							]
 						},
 						"description": "Lista odbiorców wiadomości. Wymaga CSRF tokenu (najpierw uruchom Get Compose Page). Zmień typAdresata na: nauczyciel, wychowawca, bibliotekarz, sekretariat, admin, rodzic."
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "Wiadomości — jedyny moduł który wymaga HTML scrapingu, bo JSON API nie udostępnia wiadomości.\n\nEndpointy zwracają HTML — użyj zakładki Preview w Postmanie do podglądu."
 		}
 	],
 	"event": [
@@ -905,6 +1180,7 @@
 			"listen": "prerequest",
 			"script": {
 				"type": "text/javascript",
+				"requests": {},
 				"exec": [
 					""
 				]
@@ -914,6 +1190,7 @@
 			"listen": "test",
 			"script": {
 				"type": "text/javascript",
+				"requests": {},
 				"exec": [
 					"// Global: check for session expiry on API calls",
 					"if (pm.response.code === 401) {",
@@ -921,6 +1198,36 @@
 					"}"
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://synergia.librus.pl"
+		},
+		{
+			"key": "api_url",
+			"value": "https://synergia.librus.pl/gateway/api/2.0"
+		},
+		{
+			"key": "oauth_url",
+			"value": "https://api.librus.pl"
+		},
+		{
+			"key": "login",
+			"value": "TWOJ_LOGIN"
+		},
+		{
+			"key": "password",
+			"value": "TWOJE_HASLO"
+		},
+		{
+			"key": "user_identifier",
+			"value": ""
+		},
+		{
+			"key": "csrf_token",
+			"value": ""
 		}
 	]
 }

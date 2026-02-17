@@ -1,0 +1,1135 @@
+{
+    "HomeWorks": [
+        {
+            "Id": 6671271,
+            "Content": "W ramach diagnozy wiedzy z chronologii zrobimy krótką kartkówkę (nie będzie za nią oceny jeśli słabo napiszecie - chcę tylko sprawdzić co umiecie a co muszę powtórzyć). Poniżej typ zadań jakie będą i przydatne linki.\n\nhttps://www.youtube.com/watch?v=2dnFsLEH52s\nhttps://www.youtube.com/watch?v=1nNJu0u-zAU\nhttps://www.youtube.com/watch?v=OB2VnRXrEIM\n\n1.Określ który to wiek (np-1732 - XVIII w., 966 - X w.)\n\n2.Określ wiek używając określeń- I połowa , II połowa, koniec, początek wieku (np. 738 - VIII w. I połowa)\n3.Podaj pierwszą i ostatnią datę z wieku:\na) VI p.n.e.__________________________\nb) XIII p.n.e. ________________________\n\n4. Zapisz daty systemem rzymskim: \n1566- MDLXVI\n5.Co jest starszą datą?\na) 1215r czy 1883r?\nb) 170r czy 930r p.n.e?\n6.Odczytaj podaną datę i zapisz cyframi arabskimi:\na) DCCCLIX \nb)MDCLX",
+            "Date": "2025-09-11",
+            "Category": {
+                "Id": 8556,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8556"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1493507,
+                "Url": "https://api.librus.pl/2.0/Users/1493507"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25678,
+                "Url": "https://api.librus.pl/2.0/Subjects/25678"
+            },
+            "Classroom": {
+                "Id": 2194,
+                "Symbol": "C1",
+                "Name": "C1",
+                "Size": 0
+            },
+            "AddDate": "2025-09-03 11:12:16"
+        },
+        {
+            "Id": 6674588,
+            "Content": "Zajęcia profilaktyczne DEBATA",
+            "Date": "2025-09-17",
+            "Category": {
+                "Id": 8556,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8556"
+            },
+            "LessonNo": "4",
+            "TimeFrom": "10:30:00",
+            "TimeTo": "11:15:00",
+            "CreatedBy": {
+                "Id": 1589959,
+                "Url": "https://api.librus.pl/2.0/Users/1589959"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "AddDate": "2025-09-07 17:45:30"
+        },
+        {
+            "Id": 6681512,
+            "Content": "Zadanie dla chętnych: stwórz pracę (format A4) przedstawiającą podział o raz najważniejsze informacje o częściach mowy. Pracę można wykonać indywidualnie lub w parach.",
+            "Date": "2025-09-22",
+            "Category": {
+                "Id": 8364,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8364"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1890192,
+                "Url": "https://api.librus.pl/2.0/Users/1890192"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25683,
+                "Url": "https://api.librus.pl/2.0/Subjects/25683"
+            },
+            "AddDate": "2025-09-11 11:48:54"
+        },
+        {
+            "Id": 6683176,
+            "Content": "Rozpoznawanie części mowy + przypadki",
+            "Date": "2025-09-16",
+            "Category": {
+                "Id": 8363,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8363"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1890192,
+                "Url": "https://api.librus.pl/2.0/Users/1890192"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25683,
+                "Url": "https://api.librus.pl/2.0/Subjects/25683"
+            },
+            "AddDate": "2025-09-12 10:01:51"
+        },
+        {
+            "Id": 6686570,
+            "Content": "Wykonywanie działań na liczbach dziesiętnych w pamięci i pisemnie",
+            "Date": "2025-09-19",
+            "Category": {
+                "Id": 8363,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8363"
+            },
+            "LessonNo": "3",
+            "TimeFrom": "09:35:00",
+            "TimeTo": "10:20:00",
+            "CreatedBy": {
+                "Id": 1525935,
+                "Url": "https://api.librus.pl/2.0/Users/1525935"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25684,
+                "Url": "https://api.librus.pl/2.0/Subjects/25684"
+            },
+            "AddDate": "2025-09-15 11:16:30"
+        },
+        {
+            "Id": 6686594,
+            "Content": "tematy 1-3",
+            "Date": "2025-09-18",
+            "Category": {
+                "Id": 8363,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8363"
+            },
+            "LessonNo": "2",
+            "TimeFrom": "08:40:00",
+            "TimeTo": "09:25:00",
+            "CreatedBy": {
+                "Id": 1493507,
+                "Url": "https://api.librus.pl/2.0/Users/1493507"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25678,
+                "Url": "https://api.librus.pl/2.0/Subjects/25678"
+            },
+            "Classroom": {
+                "Id": 2194,
+                "Symbol": "C1",
+                "Name": "C1",
+                "Size": 0
+            },
+            "AddDate": "2025-09-15 11:18:42"
+        },
+        {
+            "Id": 6705834,
+            "Content": "Odczytywanie współrzędnych geograficznych, szerokość geograficzna, długość geograficzna, rozciągłość południkowa, rozciągłość równoleżnikowa",
+            "Date": "2025-09-30",
+            "Category": {
+                "Id": 8363,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8363"
+            },
+            "LessonNo": "4",
+            "TimeFrom": "10:30:00",
+            "TimeTo": "11:15:00",
+            "CreatedBy": {
+                "Id": 1818307,
+                "Url": "https://api.librus.pl/2.0/Users/1818307"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25676,
+                "Url": "https://api.librus.pl/2.0/Subjects/25676"
+            },
+            "AddDate": "2025-09-24 10:10:27"
+        },
+        {
+            "Id": 6714902,
+            "Content": "Działania na ułamkach zwykłych",
+            "Date": "2025-10-03",
+            "Category": {
+                "Id": 8363,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8363"
+            },
+            "LessonNo": "3",
+            "TimeFrom": "09:35:00",
+            "TimeTo": "10:20:00",
+            "CreatedBy": {
+                "Id": 1525935,
+                "Url": "https://api.librus.pl/2.0/Users/1525935"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25684,
+                "Url": "https://api.librus.pl/2.0/Subjects/25684"
+            },
+            "AddDate": "2025-09-29 10:23:31"
+        },
+        {
+            "Id": 6718547,
+            "Content": "projekt Układ Słoneczny\npraca w grupach\nstworzenie plakatów lub makiet o układzie Słonecznym;\nprzygotować na lekcje materiały potrzebne do stworzenia plakatu/makiety np.:\n- kartki/brystol,\n- informacje/ciekawostki na temat planet\n- zdjęcia/obrazki\n- kredki/flamastry",
+            "Date": "2025-10-07",
+            "Category": {
+                "Id": 8556,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8556"
+            },
+            "LessonNo": "4",
+            "TimeFrom": "10:30:00",
+            "TimeTo": "11:15:00",
+            "CreatedBy": {
+                "Id": 1818307,
+                "Url": "https://api.librus.pl/2.0/Users/1818307"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25676,
+                "Url": "https://api.librus.pl/2.0/Subjects/25676"
+            },
+            "AddDate": "2025-09-30 11:25:36"
+        },
+        {
+            "Id": 6720819,
+            "Content": "Czasownik - określanie formy gramatycznej (czas, liczba, strona, osoba, liczba, rodzaj, aspekt), tworzenie odpowiedniej formy czasownika, rozróżnianie osobowych i nieosobowych form czasownika, czasowniki przechodnie i nieprzechodnie, strony czasownika (czynna, bierna, zwrotna). Rozpoznawanie czasowników wśród innych wyrazów.",
+            "Date": "2025-10-07",
+            "Category": {
+                "Id": 8363,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8363"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1890192,
+                "Url": "https://api.librus.pl/2.0/Users/1890192"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25683,
+                "Url": "https://api.librus.pl/2.0/Subjects/25683"
+            },
+            "AddDate": "2025-10-01 21:56:34"
+        },
+        {
+            "Id": 6721646,
+            "Content": "Dział I  zapowiedziany 1.10\n\nWystąpienie Lutra\nWynalazek Jan Gutenberg - kiedy. Wyjaśnij, na czym polegał przełomowy charakter tego udoskonalenia. \nOdkrycia geograficzne\nWymień dwie przyczyny reformacji.\nSobór trydencki\nZiemie Cesarstwa Rzymskiego Narodu Niemieckiego\nTowary, które odkrywcy przywieźli do Europy\nTowary, które poznali Indianie dzięki odkryciom\nRośliny sprowadzone - w celu uprawy - do Ameryki z Azji w wyniku odkryć geograficznych\nWymień dwie konsekwencje - postanowienia soboru trydenckiego\nOsoby: Erazm z Rotterdamu, Wawrzyniec Wspaniały, Jan Gutenberg, Galileusz, Marcin Luter, Jan Kalwin, Henryk VIII, Ignacy Loyola, Mikołaj Kopernik, Stanisław Hozjusz, Galileusz,\nCechy renesansu i jego twórcy, najważniejsze dzieła\nWielcy odkrywcy: Krzysztof  Kolumb, Ferdynand Magellan, Vasco da Gamma\nPoczątek reformacji - jej główne hasła\nPrzyczyny reformacji, odkryć geograficznych, rozprzestrzeniania się idei renesansu,\nPojęcia: seminarium, sobór, Inkwizycja, Indeks ksiąg zakazanych\nJakie działania można nazwać elementami reformy Kościoła katolickiego i kontrreformacji w XVI w.\nPokój w Augsburgu\nKonkwistador\nKolonie\nMecenat\nHumanizm\nFresk",
+            "Date": "2025-10-30",
+            "Category": {
+                "Id": 7982,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/7982"
+            },
+            "LessonNo": "2",
+            "TimeFrom": "08:40:00",
+            "TimeTo": "09:25:00",
+            "CreatedBy": {
+                "Id": 1493507,
+                "Url": "https://api.librus.pl/2.0/Users/1493507"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25679,
+                "Url": "https://api.librus.pl/2.0/Subjects/25679"
+            },
+            "Classroom": {
+                "Id": 2194,
+                "Symbol": "C1",
+                "Name": "C1",
+                "Size": 0
+            },
+            "AddDate": "2025-10-25 15:55:59"
+        },
+        {
+            "Id": 6730296,
+            "Content": "Liczby naturalne i ułamki:\nRachunki pamięciowe a liczbach naturalnych.\nRachunki pamięciowe na liczbach dziesiętnych.\nDziałania pisemne na liczbach dziesiętnych.\nDziałania na ułamkach zwykłych i liczbach dziesiętnych.\nRozwinięcia dziesiętne ułamków zwykłych",
+            "Date": "2025-10-20",
+            "Category": {
+                "Id": 7982,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/7982"
+            },
+            "LessonNo": "3",
+            "TimeFrom": "09:35:00",
+            "TimeTo": "10:20:00",
+            "CreatedBy": {
+                "Id": 1525935,
+                "Url": "https://api.librus.pl/2.0/Users/1525935"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25684,
+                "Url": "https://api.librus.pl/2.0/Subjects/25684"
+            },
+            "AddDate": "2025-10-06 10:08:59"
+        },
+        {
+            "Id": 6738550,
+            "Content": "Wypracowanie klasowe - opowiadanie twórcze z opisem przeżyć wewnętrznych",
+            "Date": "2025-10-17",
+            "Category": {
+                "Id": 7982,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/7982"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1890192,
+                "Url": "https://api.librus.pl/2.0/Users/1890192"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25683,
+                "Url": "https://api.librus.pl/2.0/Subjects/25683"
+            },
+            "AddDate": "2025-10-09 06:15:51"
+        },
+        {
+            "Id": 6738551,
+            "Content": "Hobbit, czyli tam i z powrotem - kartkówka ze znajomości lektury",
+            "Date": "2025-11-04",
+            "Category": {
+                "Id": 8363,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8363"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1890192,
+                "Url": "https://api.librus.pl/2.0/Users/1890192"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "AddDate": "2025-10-10 07:57:42"
+        },
+        {
+            "Id": 6738552,
+            "Content": "Hobbit - wypracowanie klasowe",
+            "Date": "2025-12-05",
+            "Category": {
+                "Id": 7982,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/7982"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1890192,
+                "Url": "https://api.librus.pl/2.0/Users/1890192"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "AddDate": "2025-11-25 18:31:37"
+        },
+        {
+            "Id": 6741121,
+            "Content": "Hobbit - sprawdzian po omówieniu lektury",
+            "Date": "2025-12-02",
+            "Category": {
+                "Id": 7982,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/7982"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1890192,
+                "Url": "https://api.librus.pl/2.0/Users/1890192"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25683,
+                "Url": "https://api.librus.pl/2.0/Subjects/25683"
+            },
+            "AddDate": "2025-11-25 18:32:02"
+        },
+        {
+            "Id": 6753765,
+            "Content": "Zebranie i konsultacje",
+            "Date": "2025-10-30",
+            "Category": {
+                "Id": 8557,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8557"
+            },
+            "LessonNo": null,
+            "TimeFrom": "17:00:00",
+            "TimeTo": "18:00:00",
+            "CreatedBy": {
+                "Id": 1589959,
+                "Url": "https://api.librus.pl/2.0/Users/1589959"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "AddDate": "2025-10-19 13:00:25"
+        },
+        {
+            "Id": 6755108,
+            "Content": "Dział nr 2:Figury na płaszczyźnie:\n- proste i odcinki\n- okręgi i koła \n- rodzaje trójkątów i ich własności\n- rodzaje czworokątów i ich własności\n- rodzaje kątów\n- kąty przyległe, wierzchołkowe, naprzemianległe i odpowiadające\n- kąty w trójkątach i czworokątach",
+            "Date": "2025-11-05",
+            "Category": {
+                "Id": 7982,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/7982"
+            },
+            "LessonNo": "4",
+            "TimeFrom": "10:30:00",
+            "TimeTo": "11:15:00",
+            "CreatedBy": {
+                "Id": 1525935,
+                "Url": "https://api.librus.pl/2.0/Users/1525935"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25684,
+                "Url": "https://api.librus.pl/2.0/Subjects/25684"
+            },
+            "AddDate": "2025-10-20 09:52:35"
+        },
+        {
+            "Id": 6757538,
+            "Content": "Dział pierwszy: hierarchiczna budowa zwierząt, cechy zwierząt, tkanki: budowa, funkcja i występowanie.",
+            "Date": "2025-11-18",
+            "Category": {
+                "Id": 7982,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/7982"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1818309,
+                "Url": "https://api.librus.pl/2.0/Users/1818309"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25672,
+                "Url": "https://api.librus.pl/2.0/Subjects/25672"
+            },
+            "AddDate": "2025-10-21 08:21:28"
+        },
+        {
+            "Id": 6762236,
+            "Content": "Rzeczownik -kartkówka (określanie formy, podział, temat i końcówka, odmiana, osobliwości w odmianie, oboczności, tematy oboczne)",
+            "Date": "2025-10-30",
+            "Category": {
+                "Id": 8363,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8363"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1890192,
+                "Url": "https://api.librus.pl/2.0/Users/1890192"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25683,
+                "Url": "https://api.librus.pl/2.0/Subjects/25683"
+            },
+            "Classroom": {
+                "Id": 2201,
+                "Symbol": "C7",
+                "Name": "C7",
+                "Size": 0
+            },
+            "AddDate": "2025-10-24 09:40:58"
+        },
+        {
+            "Id": 6769474,
+            "Content": "I termin poprawy sprawdzianu: Liczby naturalne i ułamki",
+            "Date": "2025-10-30",
+            "Category": {
+                "Id": 7982,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/7982"
+            },
+            "LessonNo": "7",
+            "TimeFrom": "13:30:00",
+            "TimeTo": "14:15:00",
+            "CreatedBy": {
+                "Id": 1525935,
+                "Url": "https://api.librus.pl/2.0/Users/1525935"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Classroom": {
+                "Id": 2206,
+                "Symbol": "D19",
+                "Name": "D19",
+                "Size": 0
+            },
+            "AddDate": "2025-10-27 10:16:58"
+        },
+        {
+            "Id": 6798753,
+            "Content": "Zamiana godzin na minuty i minut na godziny",
+            "Date": "2025-11-17",
+            "Category": {
+                "Id": 8363,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8363"
+            },
+            "LessonNo": "3",
+            "TimeFrom": "09:35:00",
+            "TimeTo": "10:20:00",
+            "CreatedBy": {
+                "Id": 1525935,
+                "Url": "https://api.librus.pl/2.0/Users/1525935"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25684,
+                "Url": "https://api.librus.pl/2.0/Subjects/25684"
+            },
+            "AddDate": "2025-11-12 11:31:52"
+        },
+        {
+            "Id": 6801080,
+            "Content": "Dział II zapowiedziany 13.11\n\ndział II\n\n\nZagadnienia \nDaty:\n1505 Konstytucja nihil novi \n1525 hołd pruski \n1569 unia lubelska \n1572 śmierć Zygmunta Augusta \n1573 pierwsza wolna elekcja i konfederacja warszawska \nLata panowania Aleksandra Jagiellończyka 1501 -1506\nPrzyczyny wojen Polski i Litwy z państwem moskiewskim\nPanowanie Zygmunta Starego 1506 -1548\nWojna polsko-krzyżacka 1519 -1521\nSekularyzacja Prus zakonnych\nHołd pruski i utworzenie Plus Książęcych\nPanowanie Zygmunta II Augusta 1548 - 1572\nKonflikt o dominację w basenie morza bałtyckiego \nWojna o panowanie nad Inflantami\nUtworzenie Komisji Morskiej\nKształtowanie się demokracji szlacheckiej- sejm walny składający się z króla dwóch izb : senatu i izby poselskiej\nKonstytucja nihil novi\nJak obradował sejm\nsposób uchwalania ustaw w sejmie XVI-wiecznej Polski \nczym jest pospolite ruszenie\nUnia Lubelska przyczyny jej zawarcia i postanowienia unii lubelskiej\nCo to jest unia realna \nPierwsza wolna elekcja 1573\nKto sprawował władzę w czasie bezkrólewia-interrex czyli prymas \n1573 wprowadzenie zasad tolerancji religijnej\nArtykuły henrykowskie i pacta conventa\nPierwszy władca elekcyjny Henryk Walezy panował w latach 1573 - 1574 przyczyna opuszczenia Polski\n\ngospodarka Rzeczypospolitej w XVI wieku\nrola portu w Gdańsku \nPrusy królewskie Prusy polskie \nzasady funkcjonowania folwarku \n\n1596 rok Unia brzeska i powstanie kościoła grekokatolickiego zwanego unickim\nReligie i wyznania mieszkańców w Rzeczpospolitej w XVI wieku:\nBracia polscy arianie Ormianie Tatarzy i Żydzi\nzłoty wiek kultury polskiej \npowstanie polskiego pisma polskiego alfabetu \nBony dla rozwoju renesansu w Polsce \ninicjatywy królowej dotyczące na przykład przebudowy Wawelu \nbudowy kaplicy zygmuntowskiej\ntwórcy renesansowi w Polsce Mikołaj rej Jan Kochanowski Andrzej Frycz Modrzewski jakie utwory stworzyli idealne miasto Zamość\nPierwszym królem Rzeczypospolitej wybranym podczas wolnej elekcji był\nTowary, które eksportowano z Rzeczypospolitej do państw Europy Zachodniej\nCzynniki, które wpłynęły na rozwój gospodarczy Rzeczypospolitej w XVI w.\nStruktura społeczna i narodowościowa Rzeczypospolitej w XVI w.\nAkt, który stał się podstawą tolerancji religijnej w Polsce nazywał się\nBezkrólewie po śmierci ostatniego Jagiellona rozpoczęło się w roku.\nWładcą z dynastii Jagiellonów panującym w 1. połowie XVI wieku był\nKto rządził Polską w czasie bezkrólewia,\nMiejsce zwoływania sejmów elekcyjnych,\nCzynniki wpływające na rozwój renesansu w Rzeczypospolitej.\nRzeczpospolita Obojga Narodów powstała za panowania\n1505 Konstytucja nihil novi - co zawierała i czego dotyczyła \nunia lubelska -kiedy uchwalona, co zawierała i w jaki sposób łączyła oba państwa, powody zawarcia unii przez oba kraje\nhołd pruski- kiedy kto, dlaczego?\nSejm walny- kto w nim uczestniczył?\nWskaż państwa, w których na przełomie XV i XVI wieku władali Jagiellonowie\nKolejność chronologiczna:\nśmierć Zygmunta Augusta i początek bezkrólewia\nunia lubelska\nuchwalenie aktu konfederacji warszawskiej\nhołd pruski\nunia brzeska\nwybuch ostatniej wojny polsko-krzyżackiej\nuchwalenie konstytucji nihil novi\npierwsza wolna elekcja\n\nDaty:\nUnia brzeska- czego dotyczyła\nPostacie:\nZygmunt I Stary\nHenryk Walezy\nZygmunt II August\nStefan Batory\nAlbrecht Hohenzollern\nMikołaj Rej",
+            "Date": "2025-11-27",
+            "Category": {
+                "Id": 7982,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/7982"
+            },
+            "LessonNo": "2",
+            "TimeFrom": "08:40:00",
+            "TimeTo": "09:25:00",
+            "CreatedBy": {
+                "Id": 1493507,
+                "Url": "https://api.librus.pl/2.0/Users/1493507"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25678,
+                "Url": "https://api.librus.pl/2.0/Subjects/25678"
+            },
+            "Classroom": {
+                "Id": 2194,
+                "Symbol": "C1",
+                "Name": "C1",
+                "Size": 0
+            },
+            "AddDate": "2025-11-24 10:20:59"
+        },
+        {
+            "Id": 6805222,
+            "Content": "Rzeczownik - poprawa kartkówki",
+            "Date": "2025-11-18",
+            "Category": {
+                "Id": 8556,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8556"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1890192,
+                "Url": "https://api.librus.pl/2.0/Users/1890192"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25683,
+                "Url": "https://api.librus.pl/2.0/Subjects/25683"
+            },
+            "AddDate": "2025-11-14 11:52:28"
+        },
+        {
+            "Id": 6811623,
+            "Content": "Ziemia we Wszechświecie, Ruch obrotowy Ziemi, Czas na Ziemi",
+            "Date": "2025-11-25",
+            "Category": {
+                "Id": 8363,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8363"
+            },
+            "LessonNo": "4",
+            "TimeFrom": "10:30:00",
+            "TimeTo": "11:15:00",
+            "CreatedBy": {
+                "Id": 1818307,
+                "Url": "https://api.librus.pl/2.0/Users/1818307"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25676,
+                "Url": "https://api.librus.pl/2.0/Subjects/25676"
+            },
+            "AddDate": "2025-11-18 10:36:34"
+        },
+        {
+            "Id": 6811673,
+            "Content": "Sprawdzian leksykalno-gramatyczny z zakresu wiedzy rozdziału 3 oraz elementów rozdziału 4 (po uzgodnieniu z uczniami).\nPowodzenia.",
+            "Date": "2025-12-09",
+            "Category": {
+                "Id": 7982,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/7982"
+            },
+            "LessonNo": "5",
+            "TimeFrom": "11:25:00",
+            "TimeTo": "12:10:00",
+            "CreatedBy": {
+                "Id": 1649837,
+                "Url": "https://api.librus.pl/2.0/Users/1649837"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25681,
+                "Url": "https://api.librus.pl/2.0/Subjects/25681"
+            },
+            "Classroom": {
+                "Id": 2190,
+                "Symbol": "B4",
+                "Name": "B4",
+                "Size": 0
+            },
+            "AddDate": "2025-11-18 10:48:56"
+        },
+        {
+            "Id": 6812296,
+            "Content": "Zamiana jednostek czasu - poprawa kartkówki",
+            "Date": "2025-11-27",
+            "Category": {
+                "Id": 8363,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8363"
+            },
+            "LessonNo": "7",
+            "TimeFrom": "13:30:00",
+            "TimeTo": "14:15:00",
+            "CreatedBy": {
+                "Id": 1525935,
+                "Url": "https://api.librus.pl/2.0/Users/1525935"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "AddDate": "2025-11-18 12:34:00"
+        },
+        {
+            "Id": 6813163,
+            "Content": "Opowieść wigilijna - kartkówka ze znajomości lektury",
+            "Date": "2025-12-16",
+            "Category": {
+                "Id": 8363,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8363"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1890192,
+                "Url": "https://api.librus.pl/2.0/Users/1890192"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25683,
+                "Url": "https://api.librus.pl/2.0/Subjects/25683"
+            },
+            "AddDate": "2025-12-02 09:42:35"
+        },
+        {
+            "Id": 6814340,
+            "Content": "Liczby na co dzień",
+            "Date": "2025-12-12",
+            "Category": {
+                "Id": 7982,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/7982"
+            },
+            "LessonNo": "3",
+            "TimeFrom": "09:35:00",
+            "TimeTo": "10:20:00",
+            "CreatedBy": {
+                "Id": 1525935,
+                "Url": "https://api.librus.pl/2.0/Users/1525935"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25684,
+                "Url": "https://api.librus.pl/2.0/Subjects/25684"
+            },
+            "AddDate": "2025-11-19 10:57:08"
+        },
+        {
+            "Id": 6839105,
+            "Content": "Dział 2.\n- Rozciągłość południkowa i równoleżnikowa\n- Układ słoneczny (planety skaliste, gazowe, wewnętrzne, zewnętrzne)\n- cechy ruchu obrotowego Ziemi\n- prędkość liniowa, kątowa\n- Następstwa ruchu obrotowego Ziemi\n- czas słoneczny, strefowy, urzędowy\n- cechy ruchu obiegowego Ziemi,\n- następstwa ruchu obrotowego Ziemi,\n- zmiany oświetlenia Ziemi w ciągu roku,\n- strefy oświetlenia Ziemi\n- znajomość pojęć: doba, rok zwrotnikowy, galaktyki, układy planetarne, planeta, gwiazda, księżyc, rok, orbita, górowanie słońca, górowanie słońca w zenicie, międzynarodowa linia zmiany daty, dzień i noc polarna, wszechświat, kosmos,",
+            "Date": "2025-12-16",
+            "Category": {
+                "Id": 7982,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/7982"
+            },
+            "LessonNo": "4",
+            "TimeFrom": "10:30:00",
+            "TimeTo": "11:15:00",
+            "CreatedBy": {
+                "Id": 1818307,
+                "Url": "https://api.librus.pl/2.0/Users/1818307"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25676,
+                "Url": "https://api.librus.pl/2.0/Subjects/25676"
+            },
+            "AddDate": "2025-12-05 08:28:03"
+        },
+        {
+            "Id": 6844122,
+            "Content": "Liczebnik",
+            "Date": "2025-12-11",
+            "Category": {
+                "Id": 8363,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8363"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1890192,
+                "Url": "https://api.librus.pl/2.0/Users/1890192"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "AddDate": "2025-12-05 08:29:44"
+        },
+        {
+            "Id": 6859054,
+            "Content": "Opowieść wigilijna - wypracowanie klasowe (ocena na nowy semestr)",
+            "Date": "2026-01-30",
+            "Category": {
+                "Id": 8556,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8556"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1890192,
+                "Url": "https://api.librus.pl/2.0/Users/1890192"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25683,
+                "Url": "https://api.librus.pl/2.0/Subjects/25683"
+            },
+            "AddDate": "2026-01-21 05:09:03"
+        },
+        {
+            "Id": 6859055,
+            "Content": "Opowieść wigilijna - sprawdzian po omówionej lekturze",
+            "Date": "2026-01-28",
+            "Category": {
+                "Id": 7982,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/7982"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1890192,
+                "Url": "https://api.librus.pl/2.0/Users/1890192"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25683,
+                "Url": "https://api.librus.pl/2.0/Subjects/25683"
+            },
+            "AddDate": "2026-01-27 18:50:17"
+        },
+        {
+            "Id": 6864552,
+            "Content": "Obliczanie drogi, gdy dana jest prędkość i czas",
+            "Date": "2026-01-07",
+            "Category": {
+                "Id": 8363,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8363"
+            },
+            "LessonNo": "4",
+            "TimeFrom": "10:30:00",
+            "TimeTo": "11:15:00",
+            "CreatedBy": {
+                "Id": 1525935,
+                "Url": "https://api.librus.pl/2.0/Users/1525935"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25684,
+                "Url": "https://api.librus.pl/2.0/Subjects/25684"
+            },
+            "AddDate": "2026-01-05 10:10:36"
+        },
+        {
+            "Id": 6871787,
+            "Content": "dział III\n\nNajważniejsze bitwy Polski z Turcją;\nUgoda perejasławska;\n\nKolejność obejmowania tronu polskiego przez poszczególnych władców od Genryka Walezego po Jana III Sobieskiego;\nPrzyczyny wojen rzeczypospolitej ze Szwecją w pierwszej połowie XVII wieku;\nDowódca obrony Jasnej Góry;\nPrzyczyny powstania chmielnickiego;\nCzym jest rokosz;\nPrzyczyny wojen Rzeczypospolitej z Rosją i Turcją w XVII w.;\nBitwa pod Kircholmem;\nW bitwa pod Wiedniem;\nPolski magnat dowódca obrony Zbaraża;\nSkutki wojen XVII wieku.;\nKozacy rejestrowi;\nKim byli bojarzy;\nNegatywne skutki stosowania zasady liberum veto;\nPotop szwedzki;\nDowódca wojskowy walczący przeciwko Szwedom- prowadził wojnę partyzancką.;\nWielka smuta;\nPostanowienia układu zawartego przez Janusza Radziwiłła ze Szwedami;\n\nZnaczenie w pokoju w Buczaczu dla Rzeczypospolitej;\n\nPostanowienia traktatu pokojowego kończącego wojnę Polski ze Szwecją;",
+            "Date": "2026-02-19",
+            "Category": {
+                "Id": 7982,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/7982"
+            },
+            "LessonNo": "2",
+            "TimeFrom": "08:40:00",
+            "TimeTo": "09:25:00",
+            "CreatedBy": {
+                "Id": 1493507,
+                "Url": "https://api.librus.pl/2.0/Users/1493507"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25678,
+                "Url": "https://api.librus.pl/2.0/Subjects/25678"
+            },
+            "Classroom": {
+                "Id": 2194,
+                "Symbol": "C1",
+                "Name": "C1",
+                "Size": 0
+            },
+            "AddDate": "2026-02-15 17:20:10"
+        },
+        {
+            "Id": 6876801,
+            "Content": "Prędkość, droga, czas - karta pracy",
+            "Date": "2026-01-16",
+            "Category": {
+                "Id": 8363,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8363"
+            },
+            "LessonNo": "3",
+            "TimeFrom": "09:35:00",
+            "TimeTo": "10:20:00",
+            "CreatedBy": {
+                "Id": 1525935,
+                "Url": "https://api.librus.pl/2.0/Users/1525935"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25684,
+                "Url": "https://api.librus.pl/2.0/Subjects/25684"
+            },
+            "AddDate": "2026-01-12 10:06:08"
+        },
+        {
+            "Id": 6878127,
+            "Content": "Pola i obwody wielokątów",
+            "Date": "2026-02-18",
+            "Category": {
+                "Id": 7982,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/7982"
+            },
+            "LessonNo": "4",
+            "TimeFrom": "10:30:00",
+            "TimeTo": "11:15:00",
+            "CreatedBy": {
+                "Id": 1525935,
+                "Url": "https://api.librus.pl/2.0/Users/1525935"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25684,
+                "Url": "https://api.librus.pl/2.0/Subjects/25684"
+            },
+            "AddDate": "2026-01-12 15:34:12"
+        },
+        {
+            "Id": 6878619,
+            "Content": "Zapylacze",
+            "Date": "2026-01-20",
+            "Category": {
+                "Id": 8556,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8556"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1818309,
+                "Url": "https://api.librus.pl/2.0/Users/1818309"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25672,
+                "Url": "https://api.librus.pl/2.0/Subjects/25672"
+            },
+            "AddDate": "2026-01-13 08:01:54"
+        },
+        {
+            "Id": 6879171,
+            "Content": "Praca w grupach - tworzymy lapbooki z lektury",
+            "Date": "2026-01-14",
+            "Category": {
+                "Id": 8556,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8556"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1890192,
+                "Url": "https://api.librus.pl/2.0/Users/1890192"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25683,
+                "Url": "https://api.librus.pl/2.0/Subjects/25683"
+            },
+            "AddDate": "2026-01-13 10:03:11"
+        },
+        {
+            "Id": 6879172,
+            "Content": "Praca w grupach - tworzymy lapbooki z lektury",
+            "Date": "2026-01-15",
+            "Category": {
+                "Id": 8556,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8556"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1890192,
+                "Url": "https://api.librus.pl/2.0/Users/1890192"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25683,
+                "Url": "https://api.librus.pl/2.0/Subjects/25683"
+            },
+            "AddDate": "2026-01-13 10:03:25"
+        },
+        {
+            "Id": 6879190,
+            "Content": "Proszę przypomnieć sobie cechy i charakterystyczne słownictwo dla charakterystyki (notatki w zeszycie lektur przy Hobbicie)",
+            "Date": "2026-01-16",
+            "Category": {
+                "Id": 8360,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8360"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1890192,
+                "Url": "https://api.librus.pl/2.0/Users/1890192"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25683,
+                "Url": "https://api.librus.pl/2.0/Subjects/25683"
+            },
+            "AddDate": "2026-01-13 10:06:40"
+        },
+        {
+            "Id": 6882488,
+            "Content": "Zebranie z wychowawcą klasy",
+            "Date": "2026-01-15",
+            "Category": {
+                "Id": 8557,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8557"
+            },
+            "LessonNo": null,
+            "TimeFrom": "17:00:00",
+            "TimeTo": "18:00:00",
+            "CreatedBy": {
+                "Id": 1589959,
+                "Url": "https://api.librus.pl/2.0/Users/1589959"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Classroom": {
+                "Id": 2189,
+                "Symbol": "A7",
+                "Name": "A7",
+                "Size": 0
+            },
+            "AddDate": "2026-01-14 18:22:45"
+        },
+        {
+            "Id": 6889677,
+            "Content": "Pole prostokąta. Zamiana jednostek pola.",
+            "Date": "2026-01-23",
+            "Category": {
+                "Id": 8363,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8363"
+            },
+            "LessonNo": "3",
+            "TimeFrom": "09:35:00",
+            "TimeTo": "10:20:00",
+            "CreatedBy": {
+                "Id": 1525935,
+                "Url": "https://api.librus.pl/2.0/Users/1525935"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25684,
+                "Url": "https://api.librus.pl/2.0/Subjects/25684"
+            },
+            "AddDate": "2026-01-20 12:24:58"
+        },
+        {
+            "Id": 6901585,
+            "Content": "W pustyni i w puszczy - kartkówka ze znajomości lektury.",
+            "Date": "2026-03-03",
+            "Category": {
+                "Id": 8363,
+                "Url": "https://api.librus.pl/2.0/HomeWorks/Categories/8363"
+            },
+            "LessonNo": "1",
+            "TimeFrom": "07:45:00",
+            "TimeTo": "08:30:00",
+            "CreatedBy": {
+                "Id": 1890192,
+                "Url": "https://api.librus.pl/2.0/Users/1890192"
+            },
+            "Class": {
+                "Id": 69300,
+                "Url": "https://api.librus.pl/2.0/Classes/69300"
+            },
+            "Subject": {
+                "Id": 25683,
+                "Url": "https://api.librus.pl/2.0/Subjects/25683"
+            },
+            "AddDate": "2026-01-30 14:07:02"
+        }
+    ],
+    "Resources": {
+        "HomeWorks\\Categories": {
+            "Url": "https://api.librus.pl/2.0/HomeWorks/Categories"
+        },
+        "..": {
+            "Url": "https://api.librus.pl/2.0/Root"
+        }
+    },
+    "Url": "https://api.librus.pl/2.0/HomeWorks"
+}

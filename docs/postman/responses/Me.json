@@ -1,0 +1,41 @@
+{
+    "Me": {
+        "Account": {
+            "Id": 3265424,
+            "UserId": 1695970,
+            "FirstName": "Krzysztof",
+            "LastName": "Cisło",
+            "Email": "aikcislo@gmail.com",
+            "GroupId": 5,
+            "IsActive": false,
+            "Login": "8281186",
+            "IsPremium": true,
+            "IsPremiumDemo": false,
+            "ExpiredPremiumDate": 1773684132,
+            "PremiumAddons": [
+                "MDPlus"
+            ]
+        },
+        "Refresh": 900,
+        "User": {
+            "FirstName": "Aleksandra",
+            "LastName": "Cisło"
+        },
+        "Class": {
+            "Id": 69300,
+            "Url": "https://api.librus.pl/2.0/Classes/69300"
+        }
+    },
+    "Resources": {
+        "Me\\PeriodicGradeAverages": {
+            "Url": "https://api.librus.pl/2.0/Me/PeriodicGradeAverages"
+        },
+        "Me\\BehaviourDescriptiveGrades": {
+            "Url": "https://api.librus.pl/2.0/Me/BehaviourDescriptiveGrades"
+        },
+        "..": {
+            "Url": "https://api.librus.pl/2.0/Root"
+        }
+    },
+    "Url": "https://api.librus.pl/2.0/Me"
+}

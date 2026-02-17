@@ -1,0 +1,15 @@
+{
+    "UserProfile": {
+        "ClassNumber": 6,
+        "AccountType": "parent",
+        "Town": "Wysoka",
+        "State": "DOLNOŚLĄSKIE",
+        "UnitType": "Szkoła podstawowa"
+    },
+    "Resources": {
+        "..": {
+            "Url": "https://api.librus.pl/2.0/Root"
+        }
+    },
+    "Url": "https://api.librus.pl/2.0/UserProfile"
+}

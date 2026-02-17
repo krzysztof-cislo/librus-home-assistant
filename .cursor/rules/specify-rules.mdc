@@ -5,6 +5,7 @@ Auto-generated from all feature plans. Last updated: 2026-02-16
 ## Active Technologies
 - Home Assistant config entry data (`entry.data`); credentials stored as `username` and `password` keys (002-config-flow-librus-auth)
 - Home Assistant config entry data; credentials stored only after successful validation (003-auth-flow-postman)
+- Home Assistant config entry; no persistent storage for homework (fetched on refresh) (004-auth-homeworks)
 
 - Python 3.11+ (Home Assistant requirement) (001-hacs-integration-skeleton)
 
@@ -24,10 +25,10 @@ cd src [ONLY COMMANDS FOR ACTIVE TECHNOLOGIES][ONLY COMMANDS FOR ACTIVE TECHNOLO
 Python 3.11+ (Home Assistant requirement): Follow standard conventions
 
 ## Recent Changes
+- 004-auth-homeworks: Added Python 3.11+ (Home Assistant requirement)
 - 003-auth-flow-postman: Added Python 3.11+ (Home Assistant requirement)
 - 002-config-flow-librus-auth: Added Python 3.11+ (Home Assistant requirement)
 
-- 001-hacs-integration-skeleton: Added Python 3.11+ (Home Assistant requirement)
 
 <!-- MANUAL ADDITIONS START -->
 <!-- MANUAL ADDITIONS END -->
