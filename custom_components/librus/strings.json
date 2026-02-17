@@ -19,6 +19,7 @@
     "error": {
       "invalid_auth": "Invalid login or password",
       "cannot_connect": "Could not connect to Librus",
+      "timeout": "Connection to Librus timed out",
       "unknown": "An unexpected error occurred"
     },
     "abort": {

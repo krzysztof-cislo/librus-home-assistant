@@ -10,7 +10,7 @@ import voluptuous as vol
 from homeassistant.config_entries import ConfigFlow, ConfigFlowResult
 
 from .const import CONF_PASSWORD, CONF_USERNAME, DOMAIN
-from .librus_client import LibrusConnectionError
+from .librus_client import LibrusConnectionError, LibrusTimeoutError
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -52,29 +52,28 @@ class LibrusConfigFlow(ConfigFlow, domain=DOMAIN):
             try:
                 if not await self._validate_librus_credentials(username, password):
                     errors["base"] = "invalid_auth"
+            except LibrusTimeoutError:
+                errors["base"] = "timeout"
             except LibrusConnectionError:
                 errors["base"] = "cannot_connect"
             except Exception:
                 _LOGGER.exception("Unexpected error validating Librus credentials")
-                errors["base"] = "cannot_connect"
+                errors["base"] = "unknown"
 
             if not errors:
-                try:
-                    return self.async_create_entry(
-                        title="Librus",
-                        data={
-                            CONF_USERNAME: username,
-                            CONF_PASSWORD: password,
-                        },
-                    )
-                except Exception:
-                    _LOGGER.exception("Unexpected error creating config entry")
-                    errors["base"] = "unknown"
+                return self.async_create_entry(
+                    title="Librus",
+                    data={
+                        CONF_USERNAME: username,
+                        CONF_PASSWORD: password,
+                    },
+                )
 
             return self.async_show_form(
                 step_id="user",
                 data_schema=DATA_SCHEMA,
                 errors=errors,
+                description_placeholders={"status": "Validating credentials…"},
             )
 
         return self.async_show_form(
@@ -96,11 +95,13 @@ class LibrusConfigFlow(ConfigFlow, domain=DOMAIN):
             try:
                 if not await self._validate_librus_credentials(username, password):
                     errors["base"] = "invalid_auth"
+            except LibrusTimeoutError:
+                errors["base"] = "timeout"
             except LibrusConnectionError:
                 errors["base"] = "cannot_connect"
             except Exception:
                 _LOGGER.exception("Unexpected error validating Librus credentials")
-                errors["base"] = "cannot_connect"
+                errors["base"] = "unknown"
 
             if not errors:
                 return self.async_update_reload_and_abort(
@@ -115,6 +116,7 @@ class LibrusConfigFlow(ConfigFlow, domain=DOMAIN):
                 step_id="reconfigure",
                 data_schema=self._get_reconfigure_schema(entry),
                 errors=errors,
+                description_placeholders={"status": "Validating credentials…"},
             )
 
         return self.async_show_form(
