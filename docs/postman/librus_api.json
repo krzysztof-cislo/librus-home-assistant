@@ -1,0 +1,926 @@
+{
+	"info": {
+		"_postman_id": "librus-api-collection-v2",
+		"name": "Librus Synergia API",
+		"description": "Kolekcja do testowania API Librusa (Synergia).\n\nŹródła:\n- JSON REST API: https://github.com/dani3l0/librusik (działająca biblioteka Python)\n- HTML scraping (wiadomości): https://github.com/Mati365/librus-api\n\n## Architektura API Librusa\n\nLibrus udostępnia **DWA** interfejsy:\n1. **JSON REST API** pod `https://synergia.librus.pl/gateway/api/2.0/` — oceny, plan lekcji, frekwencja, zadania, dni wolne itd. Zwraca JSON.\n2. **HTML (web scraping)** pod `https://synergia.librus.pl/` — wiadomości, ogłoszenia. Zwraca HTML strony.\n\n## Jak używać\n\n### 1. Ustaw dane logowania\nKliknij na nazwę kolekcji → zakładka **Variables** → ustaw `login` i `password`.\n\n### 2. Zaloguj się (folder Auth)\nUruchom **po kolei** 4 requesty:\n- **Step 1** — OAuth Init (GET)\n- **Step 2** — OAuth Login (POST z credentials)\n- **Step 3** — OAuth Grant (GET) — tu ustawiają się cookies sesyjne\n- **Step 4** — Activate API Access (GET TokenInfo → GET UserInfo)\n\n### 3. Zweryfikuj sesję\nUruchom **Get Me** z folderu Info — jeśli zwróci JSON z Twoimi danymi, sesja jest aktywna.\n\n### 4. Testuj endpointy\nWszystkie endpointy z folderu JSON API zwracają dane w formacie JSON.\nEndpointy z folderu Messages (HTML) zwracają HTML — użyj zakładki Preview w Postmanie.\n\n### Cookies\nPostman automatycznie zarządza cookies przez Cookie Manager. Po Step 3 sprawdź w Cookie Manager (ikona na dole) czy `synergia.librus.pl` ma cookies sesyjne.\n\n### Gdy sesja wygaśnie\nUruchom ponownie kroki Auth (Step 1→4).",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://synergia.librus.pl",
+			"type": "string"
+		},
+		{
+			"key": "api_url",
+			"value": "https://synergia.librus.pl/gateway/api/2.0",
+			"type": "string"
+		},
+		{
+			"key": "oauth_url",
+			"value": "https://api.librus.pl",
+			"type": "string"
+		},
+		{
+			"key": "login",
+			"value": "TWOJ_LOGIN",
+			"type": "string"
+		},
+		{
+			"key": "password",
+			"value": "TWOJE_HASLO",
+			"type": "string"
+		},
+		{
+			"key": "user_identifier",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "csrf_token",
+			"value": "",
+			"type": "string"
+		}
+	],
+	"item": [
+		{
+			"name": "Auth",
+			"description": "Logowanie OAuth do Librusa.\n\nKOLEJNOŚĆ: Step 1 → Step 2 → Step 3 → Step 4 (ściśle po kolei!)\n\nFlow (na podstawie działającej biblioteki librusik):\n1. Step 1 (GET) — inicjalizacja sesji OAuth na api.librus.pl\n2. Step 2 (POST) — wysłanie login+hasło\n3. Step 3 (GET) — OAuth Grant — serwer przez redirecty ustawia cookies sesyjne\n4. Step 4 (GET) — aktywacja dostępu do JSON API (TokenInfo → UserInfo)\n\nUWAGA: Krok 3 to /OAuth/Authorization/Grant (NIE /2FA jak w starszych źródłach!).\n\nKażdy krok ma skrypt testowy — wyniki w zakładce Test Results i konsoli (View → Show Postman Console).",
+			"item": [
+				{
+					"name": "Step 1 - OAuth Init",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Step 1: OAuth init OK', function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 302]);",
+									"});",
+									"console.log('Step 1 OK — OAuth session initialized');"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+							}
+						],
+						"url": {
+							"raw": "{{oauth_url}}/OAuth/Authorization?client_id=46&response_type=code&scope=mydata",
+							"host": ["{{oauth_url}}"],
+							"path": ["OAuth", "Authorization"],
+							"query": [
+								{ "key": "client_id", "value": "46" },
+								{ "key": "response_type", "value": "code" },
+								{ "key": "scope", "value": "mydata" }
+							]
+						},
+						"description": "KROK 1/4: Inicjalizacja sesji OAuth na api.librus.pl."
+					},
+					"response": []
+				},
+				{
+					"name": "Step 2 - OAuth Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Step 2: Login OK', function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 302]);",
+									"});",
+									"",
+									"const body = pm.response.text();",
+									"if (body.includes('error') || body.includes('Nieprawidłowy')) {",
+									"    pm.test('Credentials valid', function () {",
+									"        pm.expect.fail('Login failed — check login/password in Variables');",
+									"    });",
+									"} else {",
+									"    console.log('Step 2 OK — credentials accepted');",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{ "key": "action", "value": "login" },
+								{ "key": "login", "value": "{{login}}" },
+								{ "key": "pass", "value": "{{password}}" }
+							]
+						},
+						"url": {
+							"raw": "{{oauth_url}}/OAuth/Authorization?client_id=46",
+							"host": ["{{oauth_url}}"],
+							"path": ["OAuth", "Authorization"],
+							"query": [
+								{ "key": "client_id", "value": "46" }
+							]
+						},
+						"description": "KROK 2/4: Wysłanie loginu i hasła."
+					},
+					"response": []
+				},
+				{
+					"name": "Step 3 - OAuth Grant",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Step 3: Grant OK', function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 302]);",
+									"});",
+									"",
+									"console.log('Step 3 OK — session cookies should be set.');",
+									"console.log('Check Cookie Manager for synergia.librus.pl cookies.');"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+							}
+						],
+						"url": {
+							"raw": "{{oauth_url}}/OAuth/Authorization/Grant?client_id=46",
+							"host": ["{{oauth_url}}"],
+							"path": ["OAuth", "Authorization", "Grant"],
+							"query": [
+								{ "key": "client_id", "value": "46" }
+							]
+						},
+						"description": "KROK 3/4: OAuth Grant — finalizacja logowania.\n\nUWAGA: To jest /Grant (NIE /2FA). Potwierdzone w działającej bibliotece librusik.\n\nPo tym kroku serwer przez łańcuch redirectów ustawia cookies sesyjne na synergia.librus.pl."
+					},
+					"response": []
+				},
+				{
+					"name": "Step 4a - Get Token Info",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Step 4a: TokenInfo OK', function () {",
+									"    pm.expect(pm.response.code).to.eql(200);",
+									"});",
+									"",
+									"try {",
+									"    const data = pm.response.json();",
+									"    if (data.UserIdentifier) {",
+									"        pm.collectionVariables.set('user_identifier', data.UserIdentifier);",
+									"        console.log('UserIdentifier saved:', data.UserIdentifier);",
+									"    }",
+									"} catch(e) {",
+									"    console.error('Failed to parse TokenInfo response:', e);",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/Auth/TokenInfo",
+							"host": ["{{api_url}}"],
+							"path": ["Auth", "TokenInfo"]
+						},
+						"description": "KROK 4a/4: Pobranie informacji o tokenie sesji.\n\nZwraca JSON z UserIdentifier, który jest potrzebny do aktywacji dostępu do API.\n\nSkrypt automatycznie zapisuje UserIdentifier do zmiennej kolekcji."
+					},
+					"response": []
+				},
+				{
+					"name": "Step 4b - Activate API Access",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Step 4b: API activation OK', function () {",
+									"    pm.expect(pm.response.code).to.eql(200);",
+									"});",
+									"",
+									"console.log('=== AUTH COMPLETE ===');",
+									"console.log('Sesja aktywna. Możesz korzystać ze wszystkich endpointów.');",
+									"console.log('Uruchom \"Get Me\" aby zweryfikować.');"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/Auth/UserInfo/{{user_identifier}}",
+							"host": ["{{api_url}}"],
+							"path": ["Auth", "UserInfo", "{{user_identifier}}"]
+						},
+						"description": "KROK 4b/4: Aktywacja dostępu do JSON API.\n\nWysyła GET na UserInfo z identyfikatorem z poprzedniego kroku. Po tym kroku JSON API jest w pełni dostępne."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JSON API — Info & Account",
+			"description": "Informacje o uczniu, szkole, klasie, szczęśliwym numerku. Wszystkie zwracają JSON.",
+			"item": [
+				{
+					"name": "Get Me",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/Me",
+							"host": ["{{api_url}}"],
+							"path": ["Me"]
+						},
+						"description": "Dane zalogowanego użytkownika (imię, nazwisko, typ konta). Dobry test czy sesja jest aktywna."
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/UserProfile",
+							"host": ["{{api_url}}"],
+							"path": ["UserProfile"]
+						},
+						"description": "Profil użytkownika (typ jednostki organizacyjnej itp.)."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Classes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/Classes",
+							"host": ["{{api_url}}"],
+							"path": ["Classes"]
+						},
+						"description": "Informacje o klasie: numer, symbol, wychowawca, daty roku szkolnego (początek, koniec I semestru, koniec)."
+					},
+					"response": []
+				},
+				{
+					"name": "Get School Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/Schools",
+							"host": ["{{api_url}}"],
+							"path": ["Schools"]
+						},
+						"description": "Informacje o szkole."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Lucky Number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/LuckyNumbers",
+							"host": ["{{api_url}}"],
+							"path": ["LuckyNumbers"]
+						},
+						"description": "Szczęśliwy numerek na dziś. Pole: LuckyNumber.LuckyNumber."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Subjects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/Subjects",
+							"host": ["{{api_url}}"],
+							"path": ["Subjects"]
+						},
+						"description": "Lista wszystkich przedmiotów (Id + Name). Potrzebne do mapowania Id przedmiotu na nazwę w ocenach, frekwencji itp."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users (Teachers)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/Users",
+							"host": ["{{api_url}}"],
+							"path": ["Users"]
+						},
+						"description": "Lista nauczycieli/użytkowników (Id, FirstName, LastName). Potrzebne do mapowania Id nauczyciela na imię w ocenach, frekwencji itp."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Lessons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/Lessons",
+							"host": ["{{api_url}}"],
+							"path": ["Lessons"]
+						},
+						"description": "Lista lekcji (mapowanie Lesson Id → Subject Id). Potrzebne do frekwencji."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JSON API — Grades (Oceny)",
+			"description": "Oceny, kategorie ocen, komentarze, oceny z zachowania.",
+			"item": [
+				{
+					"name": "Get Grades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/Grades",
+							"host": ["{{api_url}}"],
+							"path": ["Grades"]
+						},
+						"description": "Wszystkie oceny ucznia. Każda ocena zawiera: Grade (wartość), Subject.Id, Category.Id, AddedBy.Id, Semester, AddDate, IsFinal, IsSemester itd.\n\nAby uzyskać pełne dane, połącz z: Subjects (nazwy przedmiotów), Users (nauczyciele), Grades/Categories (wagi), Grades/Comments."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Grade Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/Grades/Categories",
+							"host": ["{{api_url}}"],
+							"path": ["Grades", "Categories"]
+						},
+						"description": "Kategorie ocen z wagami (Name, Weight). Mapuj Category.Id z oceny na te kategorie."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Grade Comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/Grades/Comments",
+							"host": ["{{api_url}}"],
+							"path": ["Grades", "Comments"]
+						},
+						"description": "Komentarze do ocen (Id → Text). Niektóre oceny mają pole Comments z listą Id komentarzy."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Behaviour Grades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/BehaviourGrades",
+							"host": ["{{api_url}}"],
+							"path": ["BehaviourGrades"]
+						},
+						"description": "Oceny z zachowania. GradeType.Id mapuje na: 1=wzorowe, 2=bardzo dobre, 3=dobre, 4=poprawne, 5=nieodpowiednie, 6=naganne."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JSON API — Timetable (Plan lekcji)",
+			"description": "Plan lekcji i sale lekcyjne.",
+			"item": [
+				{
+					"name": "Get Timetable (Week)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/Timetables?weekStart=2026-02-16",
+							"host": ["{{api_url}}"],
+							"path": ["Timetables"],
+							"query": [
+								{
+									"key": "weekStart",
+									"value": "2026-02-16",
+									"description": "Data poniedziałku tygodnia (YYYY-MM-DD)"
+								}
+							]
+						},
+						"description": "Plan lekcji na tydzień. Parametr weekStart to data poniedziałku.\n\nZwraca obiekt Timetable z kluczami = daty (YYYY-MM-DD), wartości = tablica lekcji.\nKażda lekcja: LessonNo, Subject.Name, Teacher.FirstName/LastName, HourFrom, HourTo, Classroom.Id, IsSubstitutionClass, IsCanceled."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Other Activities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/Timetables/OtherActivitiesRegister?dateFrom=2026-02-16&dateTo=2026-02-22&hideOutdatedEntries=false",
+							"host": ["{{api_url}}"],
+							"path": ["Timetables", "OtherActivitiesRegister"],
+							"query": [
+								{ "key": "dateFrom", "value": "2026-02-16", "description": "Data od (YYYY-MM-DD)" },
+								{ "key": "dateTo", "value": "2026-02-22", "description": "Data do (YYYY-MM-DD)" },
+								{ "key": "hideOutdatedEntries", "value": "false" }
+							]
+						},
+						"description": "Dodatkowe aktywności w planie lekcji (np. zastępstwa, zajęcia dodatkowe) na podany zakres dat."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Timetable Entries (Classrooms)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/TimetableEntries",
+							"host": ["{{api_url}}"],
+							"path": ["TimetableEntries"]
+						},
+						"description": "Wpisy planu lekcji — użyteczne do wyciągnięcia listy sal lekcyjnych (Classroom.Id → Classroom.Name)."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JSON API — Attendance (Frekwencja)",
+			"description": "Frekwencja / obecności / nieobecności ucznia.",
+			"item": [
+				{
+					"name": "Get Attendances",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/Attendances",
+							"host": ["{{api_url}}"],
+							"path": ["Attendances"]
+						},
+						"description": "Wszystkie wpisy frekwencji. Każdy wpis: Lesson.Id, Type.Id, AddDate, Date, AddedBy.Id.\n\nPołącz z: Attendances/Types (typy), Lessons (mapowanie lekcja→przedmiot), Subjects (nazwy), Users (nauczyciele)."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Attendance Types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/Attendances/Types",
+							"host": ["{{api_url}}"],
+							"path": ["Attendances", "Types"]
+						},
+						"description": "Typy frekwencji (Id, Name, Short, IsPresenceKind). IsPresenceKind=true oznacza obecność, false=nieobecność."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JSON API — Homework & Exams",
+			"description": "Zadania domowe, sprawdziany, kartkówki.",
+			"item": [
+				{
+					"name": "Get HomeWorks (Exams)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/HomeWorks",
+							"host": ["{{api_url}}"],
+							"path": ["HomeWorks"]
+						},
+						"description": "Lista zadań domowych / sprawdzianów / kartkówek.\nKażdy wpis: Subject.Id, CreatedBy.Id, Category.Id, Date, TimeFrom, TimeTo, Content, AddDate.\n\nPołącz z: HomeWorks/Categories (typ), Subjects, Users."
+					},
+					"response": []
+				},
+				{
+					"name": "Get HomeWork Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/HomeWorks/Categories",
+							"host": ["{{api_url}}"],
+							"path": ["HomeWorks", "Categories"]
+						},
+						"description": "Kategorie zadań (sprawdzian, kartkówka, praca domowa itp.)."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JSON API — Free Days & Events",
+			"description": "Dni wolne, wywiadówki, nieobecności nauczycieli.",
+			"item": [
+				{
+					"name": "Get School Free Days",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/SchoolFreeDays",
+							"host": ["{{api_url}}"],
+							"path": ["SchoolFreeDays"]
+						},
+						"description": "Dni wolne od szkoły (ferie, święta, dni dyrektorskie). Każdy wpis: Name, DateFrom, DateTo."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Teacher Free Days",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/TeacherFreeDays",
+							"host": ["{{api_url}}"],
+							"path": ["TeacherFreeDays"]
+						},
+						"description": "Nieobecności nauczycieli (zwolnienia, zastępstwa). Każdy wpis: Teacher.Id, DateFrom, DateTo."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Parent-Teacher Conferences",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/ParentTeacherConferences",
+							"host": ["{{api_url}}"],
+							"path": ["ParentTeacherConferences"]
+						},
+						"description": "Wywiadówki / zebrania z rodzicami."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HTML — Messages (Wiadomości)",
+			"description": "Wiadomości — jedyny moduł który wymaga HTML scrapingu, bo JSON API nie udostępnia wiadomości.\n\nEndpointy zwracają HTML — użyj zakładki Preview w Postmanie do podglądu.",
+			"item": [
+				{
+					"name": "List Messages (Inbox)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/wiadomosci",
+							"host": ["{{base_url}}"],
+							"path": ["wiadomosci"]
+						},
+						"description": "Lista wiadomości w skrzynce odbiorczej (HTML). Tabela z kolumnami: nadawca, temat, data. Linki do poszczególnych wiadomości."
+					},
+					"response": []
+				},
+				{
+					"name": "List Received Messages (Folder 6)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/wiadomosci/6",
+							"host": ["{{base_url}}"],
+							"path": ["wiadomosci", "6"]
+						},
+						"description": "Lista odebranych wiadomości (folder 6 = odebrane)."
+					},
+					"response": []
+				},
+				{
+					"name": "List Sent Messages (Folder 5)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/wiadomosci/5",
+							"host": ["{{base_url}}"],
+							"path": ["wiadomosci", "5"]
+						},
+						"description": "Lista wysłanych wiadomości (folder 5 = wysłane)."
+					},
+					"response": []
+				},
+				{
+					"name": "Read Message",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/wiadomosci/1/:folderId/:messageId",
+							"host": ["{{base_url}}"],
+							"path": ["wiadomosci", "1", ":folderId", ":messageId"],
+							"variable": [
+								{
+									"key": "folderId",
+									"value": "6",
+									"description": "ID folderu (5=wysłane, 6=odebrane)"
+								},
+								{
+									"key": "messageId",
+									"value": "123456",
+									"description": "ID wiadomości"
+								}
+							]
+						},
+						"description": "Odczyt treści wiadomości (HTML). Zawiera: nadawca, temat, data, treść, załączniki."
+					},
+					"response": []
+				},
+				{
+					"name": "Download Attachment",
+					"protocolProfileBehavior": {
+						"followRedirects": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/wiadomosci/pobierz_zalacznik/:messageId/:fileId",
+							"host": ["{{base_url}}"],
+							"path": ["wiadomosci", "pobierz_zalacznik", ":messageId", ":fileId"],
+							"variable": [
+								{
+									"key": "messageId",
+									"value": "123456",
+									"description": "ID wiadomości"
+								},
+								{
+									"key": "fileId",
+									"value": "789",
+									"description": "ID załącznika"
+								}
+							]
+						},
+						"description": "Pobranie załącznika z wiadomości.\n\nPierwszy request zwraca redirect (302) na URL z plikiem. Librusik robi: GET redirect_url + '/get' aby pobrać plik.\n\nUWAGA: followRedirects=false — najpierw sprawdź Location header, potem pobierz z tego URL + '/get'."
+					},
+					"response": []
+				},
+				{
+					"name": "Download Attachment (Direct)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+							}
+						],
+						"url": {
+							"raw": "https://REDIRECT_URL_FROM_PREVIOUS_STEP/get",
+							"host": ["REDIRECT_URL_FROM_PREVIOUS_STEP"],
+							"path": ["get"]
+						},
+						"description": "Bezpośrednie pobranie pliku. Wklej URL z nagłówka Location z poprzedniego kroku i dodaj /get na końcu."
+					},
+					"response": []
+				},
+				{
+					"name": "List Announcements",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/ogloszenia",
+							"host": ["{{base_url}}"],
+							"path": ["ogloszenia"]
+						},
+						"description": "Lista ogłoszeń szkolnych (HTML)."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Compose Page (CSRF Token)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const body = pm.response.text();",
+									"const match = body.match(/var csrfTokenValue = \"([^\"]+)\"/);",
+									"if (match) {",
+									"    pm.collectionVariables.set('csrf_token', match[1]);",
+									"    console.log('CSRF Token saved:', match[1]);",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/wiadomosci/2/5",
+							"host": ["{{base_url}}"],
+							"path": ["wiadomosci", "2", "5"]
+						},
+						"description": "Strona tworzenia wiadomości. Skrypt automatycznie wyciąga CSRF token i zapisuje w zmiennej csrf_token. Uruchom PRZED wysyłaniem wiadomości."
+					},
+					"response": []
+				},
+				{
+					"name": "Send Message",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{ "key": "DoKogo", "value": "12345", "description": "ID odbiorcy" },
+								{ "key": "temat", "value": "Temat wiadomości" },
+								{ "key": "tresc", "value": "Treść wiadomości" },
+								{ "key": "poprzednia", "value": "6" },
+								{ "key": "wyslij", "value": "Wyślij" }
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/wiadomosci/5",
+							"host": ["{{base_url}}"],
+							"path": ["wiadomosci", "5"]
+						},
+						"description": "Wysłanie wiadomości. Najpierw uruchom 'Get Compose Page' dla CSRF tokenu."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Recipients",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Referer",
+								"value": "{{base_url}}/wiadomosci/2/5"
+							},
+							{
+								"key": "requestkey",
+								"value": "{{csrf_token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{ "key": "typAdresata", "value": "nauczyciel", "description": "Typ: nauczyciel / wychowawca / bibliotekarz / sekretariat / admin / rodzic" },
+								{ "key": "poprzednia", "value": "5" },
+								{ "key": "tabZaznaczonych", "value": "" },
+								{ "key": "czyWirtualneKlasy", "value": "false" },
+								{ "key": "idGrupy", "value": "0" }
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/getRecipients",
+							"host": ["{{base_url}}"],
+							"path": ["getRecipients"]
+						},
+						"description": "Lista odbiorców wiadomości. Wymaga CSRF tokenu (najpierw uruchom Get Compose Page). Zmień typAdresata na: nauczyciel, wychowawca, bibliotekarz, sekretariat, admin, rodzic."
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"// Global: check for session expiry on API calls",
+					"if (pm.response.code === 401) {",
+					"    console.warn('401 Unauthorized — session expired. Re-run Auth steps.');",
+					"}"
+				]
+			}
+		}
+	]
+}
